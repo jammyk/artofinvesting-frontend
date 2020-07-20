@@ -3,7 +3,6 @@ import { Input, Button, Row, Col, AutoComplete, Modal } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import logo from './aoi_logo.png';
 import LoginForm from './LoginForm.js';
-import { findAllByTestId } from '@testing-library/react';
 
 class HomePage extends Component {
 
