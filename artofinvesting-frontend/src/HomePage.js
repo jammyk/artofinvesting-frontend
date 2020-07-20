@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Input, Button, Row, Col, AutoComplete } from 'antd';
+import { Input, Button, Row, Col, AutoComplete, Modal } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import logo from './aoi_logo.png';
+import LoginForm from './LoginForm.js';
+import { findAllByTestId } from '@testing-library/react';
 
 class HomePage extends Component {
 
@@ -9,13 +11,17 @@ class HomePage extends Component {
         super(props);
         this.state = {
             searchValue: '',
-            options: []
+            options: [],
+            isSignInPopUpVisible: false
         };
 
         this.onSearch = this.onSearch.bind(this);
         this.onChange = this.onChange.bind(this);
         this.setOptions = this.setOptions.bind(this);
         this.setSearchValue = this.setSearchValue.bind(this);
+        this.onSignInButtonClick = this.onSignInButtonClick.bind(this);
+        this.handleOk = this.handleOk.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
     mockVal(str, repeat=1) {
@@ -51,6 +57,25 @@ class HomePage extends Component {
         }));
     }
 
+    onSignInButtonClick() {
+        this.setState({
+            isSignInPopUpVisible: true
+        });
+    }
+
+    handleOk(e) {
+        console.log(e);
+        this.setState({
+            isSignInPopUpVisible: false,
+        });
+    }
+
+    handleCancel(e) {
+        console.log(e);
+        this.setState({
+            isSignInPopUpVisible: false,
+        }); 
+    }
 
 
     render() {
@@ -58,9 +83,16 @@ class HomePage extends Component {
             <div>
                 <Row style={{ "paddingTop": "20px" }} type="flex" justify="end" align="bottom">
                     <Col pull={1}>
-                        <Button type="primary">Sign in</Button>
+                        <Button type="primary" onClick={this.onSignInButtonClick}>Sign in</Button>
                     </Col>
                 </Row>
+                <Modal 
+                    visible={this.state.isSignInPopUpVisible}
+                    onOk={this.handleOk}
+                    onCancel={this.handleCancel}
+                >
+                    <LoginForm />
+                </Modal>
                 <Row justify="center" align="top" style={{ "paddingTop": "100px" }}>
                     <img src={logo} className="AOI-logo" alt="logo" />
                 </Row>
