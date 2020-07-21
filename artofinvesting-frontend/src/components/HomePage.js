@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Row, Col } from 'antd';
-import logo from '../aoi_logo.png';
+import { Link } from 'react-router-dom';
+import logo from '../images/aoi_logo.png';
 import CompanySearchBar from './CompanySearchBar';
 import SignInButton from './SignInButton';
 
@@ -28,7 +29,7 @@ class HomePage extends Component {
                     </Col>
                 </Row>
                 <div style={{ "paddingTop": "20px" }}>
-                    <Button type="default">Screeners</Button>
+                    <Link to="/screeners"><Button type="default">Screeners</Button></Link>
                 </div>
             </div>
         );

@@ -1,0 +1,19 @@
+.screener-btn.ant-btn:hover, .ant-btn:focus{
+  border: white !important;
+  border-radius: 0px;
+  background-color: white;
+  animation: none;
+}
+
+.steps-label {
+    padding: 10px;
+}
+
+.steps-content {
+    margin-right: 10%;
+    border-radius: 2px;
+    min-height: 200px;
+    text-align: center;
+    position: relative;
+  }
+
