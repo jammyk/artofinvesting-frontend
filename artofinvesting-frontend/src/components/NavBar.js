@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Tabs, Row, Col, Affix } from 'antd';
 import { Link } from 'react-router-dom';
-import logo from '../aoi_logo.png';
+import logo from '../images/aoi_logo.png';
 import SignInButton from './SignInButton';
 import '../stylesheets/NavBar.css';
 
