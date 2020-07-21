@@ -1,0 +1,11 @@
+.navbar_logo {
+    margin: 0 auto;
+}
+
+.navbar_tabs {
+    padding-left: 16px;
+}
+
+.navbar_signin {
+    float: right;
+}
