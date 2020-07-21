@@ -4,7 +4,7 @@
 
 }
 
-.ant-btn:hover, .ant-btn.hover {
+.screener-btn.ant-btn:hover, .ant-btn:focus{
   border: white !important;
   border-radius: 0px;
   background-color: white;
@@ -22,11 +22,6 @@
     text-align: center;
     position: relative;
   }
-
-.screener-button {
-  border-radius: 0px;
-  background-color: white;
-}  
 
   .steps-action {
     margin-top: 24px;
