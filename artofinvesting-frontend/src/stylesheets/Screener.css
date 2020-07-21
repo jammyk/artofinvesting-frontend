@@ -1,9 +1,3 @@
-.steps-container {
-    margin: auto;
-    display: flex;
-
-}
-
 .screener-btn.ant-btn:hover, .ant-btn:focus{
   border: white !important;
   border-radius: 0px;
@@ -23,7 +17,3 @@
     position: relative;
   }
 
-  .steps-action {
-    margin-top: 24px;
-    
-  }
