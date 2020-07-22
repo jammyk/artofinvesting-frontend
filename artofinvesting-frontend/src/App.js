@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import HomePage from './components/HomePage';
-import NavBar from './components/NavBar';
 import Screener from './components/Screener'
 import { Switch, Route } from 'react-router-dom';
+import DetailsPage from './components/DetailsPage';
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Switch>
           <Route path='/' component={HomePage} exact/>
           <Route path='/screeners' component={Screener}/>
-          <HomePage/>
+          <Route path='/details' component={DetailsPage}/>
         </Switch>
       </div>
   );
