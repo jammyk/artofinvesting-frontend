@@ -11,8 +11,8 @@ export default class FixedSideNav extends Component {
 
   render() {
     return (
-        <div className="fixedSideNav-container" style={{width: 200}}>
-            <Anchor className="fixed-side-nav_anchor" onClick={this.handleClick} offsetTop={300} bounds={2} style={{justifyContent: "start", display: "flex"}}>
+        <div className="fixedSideNav-container" style={{display: "flex"}}>
+            <Anchor className="fixed-side-nav_anchor" onClick={this.handleClick} offsetTop={300} bounds={2} style={{textAlign: "left", justifyContent: "start", display: "flex"}}>
                 <Link href="#first-paragraph" title="First Paragraph"/>
                 <Link href="#financial-statements" title="Financial Statements"/>
                 <Link href="#metrics" title="Metrics"/>
