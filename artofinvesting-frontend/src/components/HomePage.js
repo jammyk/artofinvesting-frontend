@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import logo from '../images/aoi_logo.png';
 import CompanySearchBar from './CompanySearchBar';
 import SignInButton from './SignInButton';
-import DetailsPage from './DetailsPage';
 
 class HomePage extends Component {
 
