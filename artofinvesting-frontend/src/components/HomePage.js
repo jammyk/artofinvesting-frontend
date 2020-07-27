@@ -7,11 +7,6 @@ import SignInButton from './SignInButton';
 
 class HomePage extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-
     render() {
         return (
             <div>

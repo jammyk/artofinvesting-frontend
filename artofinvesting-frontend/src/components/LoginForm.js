@@ -53,14 +53,14 @@ export default class LoginForm extends Component {
 
                         <a className="login-form-forgot" href="">
                             Forgot password
-        </a>
+                        </a>
                     </Form.Item>
 
                     <Form.Item>
                         <Button type="primary" htmlType="submit" className="login-form-button">
                             Log in
-        </Button>
-        Or <a href="">register now!</a>
+                        </Button>
+                        Or <a href="">register now!</a>
                     </Form.Item>
                 </Form>
             </div>
