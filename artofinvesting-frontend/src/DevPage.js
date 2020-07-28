@@ -1,0 +1,79 @@
+import React, { Component } from 'react'
+import FinancialsGraphCarousel from './components/FinancialsGraphCarousel'
+
+
+const graphMockData = [
+    {
+        "year": 2010,
+        "revenue": 62.48,
+        "operatingIncome": 24.1,
+        "netIncome": 18.76
+    },
+    {
+        "year": 2011,
+        "revenue": 69.94,
+        "operatingIncome": 27.16,
+        "netIncome": 23.15
+    },
+    {
+        "year": 2012,
+        "revenue": 73.72,
+        "operatingIncome": 27.96,
+        "netIncome": 16.98
+    },
+    {
+        "year": 2013,
+        "revenue": 77.85,
+        "operatingIncome": 26.76,
+        "netIncome": 21.86
+    },
+    {
+        "year": 2014,
+        "revenue": 86.83,
+        "operatingIncome": 27.89,
+        "netIncome": 22.07
+    },
+    {
+        "year": 2015,
+        "revenue": 93.58,
+        "operatingIncome": 28.17,
+        "netIncome": 12.19
+    },
+    {
+        "year": 2016,
+        "revenue": 91.15,
+        "operatingIncome": 27.19,
+        "netIncome": 20.54
+    },
+    {
+        "year": 2017,
+        "revenue": 96.57,
+        "operatingIncome": 29.33,
+        "netIncome": 25.49
+    },
+    {
+        "year": 2018,
+        "revenue": 62.48,
+        "operatingIncome": 35.06,
+        "netIncome": 16.57
+    },
+    {
+        "year": 2019,
+        "revenue": 62.48,
+        "operatingIncome": 42.96,
+        "netIncome": 39.24
+    }
+];
+
+
+export default class DevPage extends Component {
+
+  render() {
+    return (
+      <div>
+          
+        <FinancialsGraphCarousel graphMockData={graphMockData}></FinancialsGraphCarousel>
+      </div>
+    )
+  }
+}

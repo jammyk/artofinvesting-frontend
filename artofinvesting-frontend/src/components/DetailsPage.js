@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FixedSideNav from './FixedSideNav'
 import { Row, Col } from 'antd'
-import ComposedGraph from './ComposedGraph'
+import FinancialsGraphCarousel from './FinancialsGraphCarousel';
 
 const graphMockData = [
     {
@@ -84,7 +84,7 @@ export default class DetailsPage extends Component {
                             Sed porttitor imperdiet iaculis. Sed rhoncus quis libero in hendrerit. Cras condimentum diam sed nisl aliquet, vitae convallis leo cursus. Curabitur molestie consequat felis ac fringilla. Vestibulum facilisis nulla sit amet augue porta, id fermentum nisi feugiat. Sed vulputate, mi sed maximus lacinia, lacus sem rhoncus ipsum, a mollis ipsum tellus sed sem. Phasellus eu ultrices urna. Donec laoreet velit sed nibh dignissim tincidunt.
                         </p>
                     </section>
-                    <ComposedGraph data={graphMockData} xLabel="year" stackedUpperBarKey="revenue" stackedLowerBarKey="netIncome" lineKey="operatingIncome"></ComposedGraph>
+                    <FinancialsGraphCarousel graphMockData={graphMockData}></FinancialsGraphCarousel>
                     <p id="financial-statements">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec dui purus. Ut nec dolor consectetur, dapibus elit ut, faucibus arcu. Aenean mi sapien, sodales vitae imperdiet et, iaculis non lacus. Etiam commodo non purus sit amet posuere. Nam id odio eget mi fringilla finibus. Fusce vitae urna luctus, tincidunt nisi eu, euismod erat. Praesent convallis blandit dui, nec dictum erat consectetur quis. Sed cursus varius augue a egestas.
                         Integer et blandit ante. Cras nec congue dui, ac venenatis turpis. Nullam non magna nulla. Curabitur scelerisque leo eget varius facilisis. Mauris aliquam molestie dolor, eget facilisis neque ullamcorper ut. Fusce et nunc sapien. Nullam eget elementum tortor. Nunc lacinia nulla nec mauris sodales tempus.
