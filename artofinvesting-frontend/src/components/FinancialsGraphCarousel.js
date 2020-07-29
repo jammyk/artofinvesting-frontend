@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import { Carousel, Row, Col } from 'antd'
+import { Carousel, Row, Col, Typography } from 'antd'
 import ComposedGraph from './ComposedGraph'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import '../stylesheets/GraphCarousel.css';
+
+const { Title } = Typography;
 
 export default class FinancialsGraphCarousel extends Component {
     constructor(props) {
@@ -32,7 +34,7 @@ export default class FinancialsGraphCarousel extends Component {
             <div>
                 <Row align='middle'>
                     {this.state.isStart ?
-                        <Col span={1} /> 
+                        <Col span={1} />
                         :
                         <Col className='slider-btn-container left' span={1} onClick={this.prev} >
                             <LeftOutlined />
@@ -40,11 +42,23 @@ export default class FinancialsGraphCarousel extends Component {
                     }
                     <Col span={22}>
                         <Carousel swipeToSlide={true} ref={c => (this.carousel = c)} afterChange={this.onCarouselChange}>
-                            <div>
-                                <ComposedGraph data={this.props.graphMockData} xLabel="year" stackedUpperBarKey="revenue" stackedLowerBarKey="netIncome" lineKey="operatingIncome"></ComposedGraph>
+                            <div className='firstSlide'>
+                                <Title level={3}>{this.props.financialStatementName}</Title>
+                                <ComposedGraph
+                                    data={this.props.financialsData}
+                                    xLabel={this.props.reportType}
+                                    leftBarKey="revenue"
+                                    rightBarKey="netIncome"
+                                    lineKey="operatingIncome" />
                             </div>
                             <div>
-                                <ComposedGraph data={this.props.graphMockData} xLabel="year" stackedUpperBarKey="netIncome" stackedLowerBarKey="revenue" lineKey="operatingIncome"></ComposedGraph>
+                                <Title level={3}>{this.props.financialStatementName} Growth</Title>
+                                <ComposedGraph
+                                    data={this.props.growthData}
+                                    xLabel={this.props.reportType}
+                                    leftBarKey="netIncome"
+                                    rightBarKey="revenue"
+                                    lineKey="operatingIncome" />
                             </div>
                         </Carousel>
                     </Col>

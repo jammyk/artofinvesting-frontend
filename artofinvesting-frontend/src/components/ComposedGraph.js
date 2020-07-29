@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ResponsiveContainer, ComposedChart, XAxis, YAxis, CartesianGrid, Bar, Line, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, ComposedChart, XAxis, YAxis, CartesianGrid, Bar, Line, Tooltip, Legend, LabelList } from 'recharts';
 
 const colors =
 {
@@ -19,13 +19,15 @@ class ComposedGraph extends Component {
                 <ResponsiveContainer width={"100%"} height={280}>
                     <ComposedChart data={this.props.data}>
                         <XAxis dataKey={this.props.xLabel} />
-                        <YAxis />
+                        <YAxis hide={true} />
                         <Tooltip />
-                        <Legend verticalAlign="top" align="right" />
+                        <Legend verticalAlign="bottom" align="right" />
                         <CartesianGrid stroke={colors.white} />
-                        {this.props.barKey && <Bar dataKey={this.props.barKey} barSize={20} fill={colors.blue2} />}
-                        {this.props.stackedUpperBarKey && <Bar dataKey={this.props.stackedLowerBarKey} barSize={20} stackId="a" fill={colors.blue1} />}
-                        {this.props.stackedLowerBarKey && <Bar dataKey={this.props.stackedUpperBarKey} barSize={20} stackId="a" fill={colors.blue3} />}
+                        {this.props.leftBarKey &&
+                            <Bar dataKey={this.props.leftBarKey} barSize={20} fill={colors.blue1}>
+                                <LabelList dataKey={this.props.leftBarKey} position='top'/>
+                            </Bar>}
+                        {this.props.rightBarKey && <Bar dataKey={this.props.rightBarKey} barSize={20} fill={colors.blue3} />}
                         {this.props.lineKey && <Line dataKey={this.props.lineKey} stroke={colors.blue5} />}
                     </ComposedChart>
                 </ResponsiveContainer>

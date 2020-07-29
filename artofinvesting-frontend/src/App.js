@@ -14,7 +14,6 @@ function App() {
           <Route path='/' component={HomePage} exact/>
           <Route path='/screeners' component={Screener}/>
           <Route path='/details' component={DetailsPage}/>
-          <Route path='/dev' component={DevPage} />
         </Switch>
       </div>
   );
