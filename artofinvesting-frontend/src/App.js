@@ -4,7 +4,6 @@ import HomePage from './components/HomePage';
 import Screener from './components/Screener'
 import { Switch, Route } from 'react-router-dom';
 import DetailsPage from './components/DetailsPage';
-import DevPage from './DevPage';
 
 
 function App() {
