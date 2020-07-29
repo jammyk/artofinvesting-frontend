@@ -1,0 +1,9 @@
+tr { 
+    display: block; 
+    float: left; 
+    text-align: left;
+}
+
+th, td { 
+    display: block; 
+}
