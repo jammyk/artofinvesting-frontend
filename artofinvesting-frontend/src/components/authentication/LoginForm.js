@@ -1,13 +1,46 @@
-import React, { Component } from 'react'
-import { Form, Input, Button, Checkbox } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import React, { Component } from '../../../node_modules/react'
+import { Form, Input, Button, Checkbox, message } from '../../../node_modules/antd';
+import { UserOutlined, LockOutlined } from '../../../node_modules/@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 export default class LoginForm extends Component {
 
-    onFinish(values) {
-        console.log('Received values of form: ', values);
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            username: '',
+            password: ''
+        };
+
+        this.onFinish = this.onFinish.bind(this);
     }
 
+    onFinish(values) {
+        console.log('Received values of form: ', values);
+
+        // axios.post(http://localhost:3001/registration, {
+        //     user: {
+        //         email: username,
+        //         password: password
+        //     }
+        // },
+        //     { withCredentials: true }).then(response => {
+        //         localStorage.setItem('jwt', rest.data);
+        //         console.log("Login result", repsonse);
+        //     }).catch(error => {
+        //         console.log("Login error", error);
+        //     });
+
+        // axios.post().then()
+        if (values.username === 'test' && values.password === 'test') {
+            localStorage.setItem('jwt', 'loggedIn');
+            message.success('successfully logged in');
+            this.props.toggleModal(false);
+        } else {
+            message.error('login credentials do not match our records');
+        }
+    }
 
     render() {
         return (
@@ -16,7 +49,7 @@ export default class LoginForm extends Component {
                     name="normal_login"
                     className="login-form"
                     initialValues={{
-                        remember: true,
+                        remember: false,
                     }}
                     onFinish={this.onFinish}
                 >
@@ -51,19 +84,19 @@ export default class LoginForm extends Component {
                             <Checkbox>Remember me</Checkbox>
                         </Form.Item>
 
-                        <a className="login-form-forgot" href="">
+                        <Link to='/forgotpass'>
                             Forgot password
-                        </a>
+                        </Link>
                     </Form.Item>
 
                     <Form.Item>
                         <Button type="primary" htmlType="submit" className="login-form-button">
                             Log in
                         </Button>
-                        Or <a href="">register now!</a>
+                        Or <Link to='/register'>register now!</Link>
                     </Form.Item>
                 </Form>
-            </div>
+            </div >
         )
     }
 }
