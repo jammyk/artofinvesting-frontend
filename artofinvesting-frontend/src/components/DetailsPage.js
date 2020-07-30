@@ -1,6 +1,70 @@
 import React, { Component } from 'react'
 import FixedSideNav from './FixedSideNav'
 import { Row, Col } from 'antd'
+import FinancialsGraphCarousel from './FinancialsGraphCarousel';
+
+const graphMockData = [
+    {
+        "year": 2010,
+        "revenue": 62.48,
+        "operatingIncome": 24.1,
+        "netIncome": 18.76
+    },
+    {
+        "year": 2011,
+        "revenue": 69.94,
+        "operatingIncome": 27.16,
+        "netIncome": 23.15
+    },
+    {
+        "year": 2012,
+        "revenue": 73.72,
+        "operatingIncome": 27.96,
+        "netIncome": 16.98
+    },
+    {
+        "year": 2013,
+        "revenue": 77.85,
+        "operatingIncome": 26.76,
+        "netIncome": 21.86
+    },
+    {
+        "year": 2014,
+        "revenue": 86.83,
+        "operatingIncome": 27.89,
+        "netIncome": 22.07
+    },
+    {
+        "year": 2015,
+        "revenue": 93.58,
+        "operatingIncome": 28.17,
+        "netIncome": 12.19
+    },
+    {
+        "year": 2016,
+        "revenue": 91.15,
+        "operatingIncome": 27.19,
+        "netIncome": 20.54
+    },
+    {
+        "year": 2017,
+        "revenue": 96.57,
+        "operatingIncome": 29.33,
+        "netIncome": 25.49
+    },
+    {
+        "year": 2018,
+        "revenue": 62.48,
+        "operatingIncome": 35.06,
+        "netIncome": 16.57
+    },
+    {
+        "year": 2019,
+        "revenue": 62.48,
+        "operatingIncome": 42.96,
+        "netIncome": 39.24
+    }
+];
 
 export default class DetailsPage extends Component {
     render() {
@@ -20,6 +84,7 @@ export default class DetailsPage extends Component {
                             Sed porttitor imperdiet iaculis. Sed rhoncus quis libero in hendrerit. Cras condimentum diam sed nisl aliquet, vitae convallis leo cursus. Curabitur molestie consequat felis ac fringilla. Vestibulum facilisis nulla sit amet augue porta, id fermentum nisi feugiat. Sed vulputate, mi sed maximus lacinia, lacus sem rhoncus ipsum, a mollis ipsum tellus sed sem. Phasellus eu ultrices urna. Donec laoreet velit sed nibh dignissim tincidunt.
                         </p>
                     </section>
+                    <FinancialsGraphCarousel graphMockData={graphMockData}></FinancialsGraphCarousel>
                     <p id="financial-statements">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec dui purus. Ut nec dolor consectetur, dapibus elit ut, faucibus arcu. Aenean mi sapien, sodales vitae imperdiet et, iaculis non lacus. Etiam commodo non purus sit amet posuere. Nam id odio eget mi fringilla finibus. Fusce vitae urna luctus, tincidunt nisi eu, euismod erat. Praesent convallis blandit dui, nec dictum erat consectetur quis. Sed cursus varius augue a egestas.
                         Integer et blandit ante. Cras nec congue dui, ac venenatis turpis. Nullam non magna nulla. Curabitur scelerisque leo eget varius facilisis. Mauris aliquam molestie dolor, eget facilisis neque ullamcorper ut. Fusce et nunc sapien. Nullam eget elementum tortor. Nunc lacinia nulla nec mauris sodales tempus.

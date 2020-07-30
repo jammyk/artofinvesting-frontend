@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import Screener from './components/Screener'
 import { Switch, Route } from 'react-router-dom';
 import DetailsPage from './components/DetailsPage';
+import TestPage from './TestPage';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path='/' component={HomePage} exact/>
           <Route path='/screeners' component={Screener}/>
           <Route path='/details' component={DetailsPage}/>
+          <Route path='/test' component={TestPage} />
         </Switch>
       </div>
   );
