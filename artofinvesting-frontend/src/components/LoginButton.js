@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import { Button } from 'antd';
 import LoginModal from './authentication/LoginModal';
+import AuthenticatedAlternative from './authentication/AuthenticatedAlternative';
 
 export default class LoginButton extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLoginVisible: false
+            isLoginVisible: false,
+            authenticatedChildrenKey: {
+                'authenticatedLoginButton': true
+            }
         };
 
         this.toggleLoginModal = this.toggleLoginModal.bind(this);
@@ -19,14 +23,17 @@ export default class LoginButton extends Component {
     }
 
     toggleLoginModal(isLoginVisible) {
-        this.setState({ isLoginVisible: isLoginVisible});
+        this.setState({ isLoginVisible: isLoginVisible });
     }
 
     render() {
         return (
             <div>
-                <Button type="primary" onClick={this.onSignInButtonClick}>Sign in</Button>
-                <LoginModal toggleModal={this.toggleLoginModal} isModalVisible={this.state.isLoginVisible} />
+                <AuthenticatedAlternative authenticatedChildren={this.state.authenticatedChildrenKey}>
+                    <Button type="primary" onClick={this.onSignInButtonClick}>Sign in</Button>
+                    <LoginModal toggleModal={this.toggleLoginModal} isModalVisible={this.state.isLoginVisible} />
+                    <Button key={'authenticatedLoginButton'}>Hello Mr.Smith</Button>
+                </AuthenticatedAlternative>
             </div>
         )
     }

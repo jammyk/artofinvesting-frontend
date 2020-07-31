@@ -1,9 +1,9 @@
-import React, { Component } from '../../../node_modules/react'
-import { Form, Input, Button, Checkbox, message } from '../../../node_modules/antd';
-import { UserOutlined, LockOutlined } from '../../../node_modules/@ant-design/icons';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Form, Input, Button, Checkbox, message } from 'antd';
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { Link, withRouter } from 'react-router-dom';
 
-export default class LoginForm extends Component {
+class LoginForm extends Component {
 
     constructor(props) {
         super(props);
@@ -37,6 +37,7 @@ export default class LoginForm extends Component {
             localStorage.setItem('jwt', 'loggedIn');
             message.success('successfully logged in');
             this.props.toggleModal(false);
+            this.props.history.push('/');
         } else {
             message.error('login credentials do not match our records');
         }
@@ -100,3 +101,5 @@ export default class LoginForm extends Component {
         )
     }
 }
+
+export default withRouter(LoginForm);

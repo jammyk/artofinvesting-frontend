@@ -1,9 +1,10 @@
-import React, { Component } from '../../../node_modules/react'
-import { Modal } from '../../../node_modules/antd';
+import React, { Component } from 'react'
+import { Modal } from 'antd';
 import LoginForm from './LoginForm';
+import { withRouter } from 'react-router-dom';
 
 
-export default class LoginModal extends Component {
+class LoginModal extends Component {
 
     constructor(props) {
         super(props);
@@ -16,12 +17,11 @@ export default class LoginModal extends Component {
 
 
     handleCancel = (e) => {
-        console.log(e);
         this.setModalVisibility(false);
         if (this.props.toggleModal) {
             this.props.toggleModal(false);
         } else {
-            this.props.history.goBack();
+            this.props.history.push('/');
         }
     }
 
@@ -44,3 +44,5 @@ export default class LoginModal extends Component {
         )
     }
 }
+
+export default withRouter(LoginModal);

@@ -10,28 +10,6 @@ import Registration from './components/Registration';
 import UserRecoverPassword from './components/UserRecoverPassword';
 
 export default class App extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      loggedInStatus: "NOT_LOGGED_IN",
-      user: {}
-    };
-
-    this.handleLogin = this.handleLogin.bind(this);
-  }
-
-  checkLoginStatus() {
-    // TODO axios call
-  }
-
-
-  handleLogin(data) {
-    this.setState({
-      loggedInStatus: "LOGGED_IN",
-      user: {}    // data.user
-    });
-  }
 
   render() {
     return (
@@ -40,16 +18,14 @@ export default class App extends Component {
           <Route
             exact
             path='/'
-            render={props => (
-              <HomePage {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.loggedInStatus} />
-            )}
+            component={HomePage}
           />
-          <Route 
-          exact 
-          path='/login'
-          render={props => (
-            <LoginModal {... props} isModalVisible={true} />
-          )} />
+          <Route
+            exact
+            path='/login'
+            render={props => (
+              <LoginModal {...props} isModalVisible={true} />
+            )} />
           <Route path='/screeners' component={Screener} />
           <Route path='/details' component={DetailsPage} />
           <Route path='/test' component={TestPage} />
