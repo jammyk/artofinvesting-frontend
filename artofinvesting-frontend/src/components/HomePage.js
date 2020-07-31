@@ -6,19 +6,6 @@ import CompanySearchBar from './CompanySearchBar';
 import LoginButton from './LoginButton';
 
 class HomePage extends Component {
-    constructor(props) {
-        super(props);
-
-        this.handleSuccessfulAuth = this.handleSuccessfulAuth.bind(this);
-    }
-
-    handleSuccessfulAuth(data) {
-        // TODO update parent component
-        this.props.handleLogin(data);
-        this.props.history.push("hing:(");
-    }
-
-
     render() {
         return (
             <div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Form, Input, Button, Checkbox, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { Link, withRouter } from 'react-router-dom';
+import { testAuthentication } from '../../helpers/authentication';
 
 class LoginForm extends Component {
 
@@ -34,7 +35,7 @@ class LoginForm extends Component {
 
         // axios.post().then()
         if (values.username === 'test' && values.password === 'test') {
-            localStorage.setItem('jwt', 'loggedIn');
+            testAuthentication();
             message.success('successfully logged in');
             this.props.toggleModal(false);
             this.props.history.push('/');
