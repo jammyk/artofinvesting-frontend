@@ -20,7 +20,7 @@ class HomePage extends Component {
                 </Row>
                 <Row justify="center" align="top" style={{ "paddingTop": "20px" }}>
                     <Col span={10}>
-                        <CompanySearchBar />
+                        <CompanySearchBar message="Search for companies using their ticker "/>
                     </Col>
                 </Row>
                 <div style={{ "paddingTop": "20px" }}>
