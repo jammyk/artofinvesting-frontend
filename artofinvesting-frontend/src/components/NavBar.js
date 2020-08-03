@@ -27,7 +27,7 @@ export default class NavBar extends Component {
                         <Col span={18}>
                             <div className="navbar_tabs">
                                 <Tabs defaultActiveKey="1" onChange={this.callback}>
-                                    <TabPane tab={<Link to="/">Screener</Link>} key="1"></TabPane>
+                                    <TabPane tab={<Link to="/screeners">Screener</Link>} key="1"></TabPane>
                                     <TabPane tab={<Link to="/">Artists</Link>} key="2"></TabPane>
                                 </Tabs>
                             </div>

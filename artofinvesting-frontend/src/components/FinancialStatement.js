@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import 'antd/dist/antd.css'
 import '../stylesheets/Table.css'
 import { Tabs, Row } from 'antd'
-import IncStmtTable from './IncomeStatementTable'
-import BalShtTable from './BalanceSheetTable'
-import CashFlowTable from './CashFlowTable'
+import IncomeStatementTable from './tables/IncomeStatementTable'
+import BalanceSheetTable from './tables/BalanceSheetTable'
+import CashFlowTable from './tables/CashFlowTable'
 import graphData from '../mockdata/graphMockData.json'
 import FinancialsGraphCarousel from './FinancialsGraphCarousel'
 
@@ -17,17 +17,19 @@ class FinancialStatement extends Component {
             <div>
                 <Tabs defaultActiveKey="incomeStatement" centered>
                     <TabPane tab="Income Statement" key="incomeStatement">
-                    <FinancialsGraphCarousel graphMockData={graphData}></FinancialsGraphCarousel>
+                        <FinancialsGraphCarousel financialsData={graphData} />
                         <Row justify="center">
-                            <IncStmtTable />
+                            <IncomeStatementTable />
                         </Row>
                     </TabPane>
                     <TabPane tab="Balance Sheet" key="balanceSheet">
+                        <FinancialsGraphCarousel financialsData={graphData} />
                         <Row justify="center">
-                            <BalShtTable />
+                            <BalanceSheetTable />
                         </Row>
                     </TabPane>
                     <TabPane tab="Cash Flow" key="cashFlow">
+                        <FinancialsGraphCarousel financialsData={graphData} />
                         <Row justify="center">
                             <CashFlowTable />
                         </Row>

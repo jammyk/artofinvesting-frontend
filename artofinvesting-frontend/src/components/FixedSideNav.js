@@ -4,24 +4,54 @@ const { Link } = Anchor;
 
 export default class FixedSideNav extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            'offSetTop': 0
+        };
+
+        this.updateTopOffset = this.updateTopOffset.bind(this);
+    }
+
     handleClick = (e, link) => {
         e.preventDefault();
         console.log(link);
     }
 
-  render() {
-    return (
-        <div className="fixedSideNav-container" style={{display: "flex"}}>
-            <Anchor className="fixed-side-nav_anchor" onClick={this.handleClick} offsetTop={300} bounds={2} style={{textAlign: "left", justifyContent: "start", display: "flex"}}>
-                <Link href="#first-paragraph" title="First Paragraph"/>
-                <Link href="#financial-statements" title="Financial Statements"/>
-                <Link href="#metrics" title="Metrics"/>
-                <Link href="#growth" title="Growth"/>
-                <Link href="#margin" title="Margin"/>
-                <Link href="#profitability" title="Profitability"/>
-                <Link href="#key-holders" title="Key Holders"/>
-            </Anchor>
-        </div>
-    )
-  }
+    computeOffSetTop() {
+        let currentWindowHeight = window.innerHeight;
+        return currentWindowHeight / 2;
+    }
+
+    updateTopOffset() {
+        let newTopOffset = this.computeOffSetTop();
+        this.setState({ offSetTop: newTopOffset });
+    }
+
+    componentDidMount() {
+        this.updateTopOffset();
+        window.addEventListener('resize', this.updateTopOffset);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateTopOffset);
+    }
+
+    render() {
+        return (
+            <div className="fixedSideNav-container" style={{ display: "flex" }}>
+                <Anchor
+                    className="fixed-side-nav_anchor"
+                    onClick={this.handleClick}
+                    offsetTop={this.state.offSetTop}
+                    bounds={2}
+                    style={{ textAlign: "left", justifyContent: "start", display: "flex" }}
+                >
+                    <Link href="#financial-statements" title="Financial Statements" />
+                    <Link href="#metrics" title="Metrics" />
+                    <Link href="#sharesOutstnding" title="Shares Outstanding" />
+                </Anchor>
+            </div>
+        )
+    }
 }

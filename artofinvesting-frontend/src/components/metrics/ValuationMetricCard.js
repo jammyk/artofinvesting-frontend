@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Card } from 'antd'
-import '../stylesheets/FlippedAxisTable.css';
+import '../../stylesheets/FlippedAxisTable.css';
 
 export default class ValuationMetricCard extends Component {
   render() {

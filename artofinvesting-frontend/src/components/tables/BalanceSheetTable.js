@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import data from '../mockdata/financialStatement.json'
+import React from 'react'
+import data from '../../mockdata/financialStatement.json'
 
 const { default: FinancialStatementTable } = require("./FinancialStatementTable")
 const balanceSheet = data["balanceSheets"]
 
-class BalShtTable extends FinancialStatementTable{
+class BalanceSheetTable extends FinancialStatementTable{
 
     renderBalSheetData() {
         return balanceSheet.map((balSht, index) => {
@@ -100,4 +100,4 @@ class BalShtTable extends FinancialStatementTable{
         )
     }
 } 
-export default BalShtTable
+export default BalanceSheetTable

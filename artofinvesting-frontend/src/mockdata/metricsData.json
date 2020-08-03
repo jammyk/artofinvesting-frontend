@@ -1,0 +1,62 @@
+[
+    {
+        "year": 2010,
+        "returnOnAssets": 10,
+        "returnOnEquity": 11.5,
+        "returnOnInvestedCapital": 9
+    },
+    {
+        "year": 2011,
+        "returnOnAssets": 7,
+        "returnOnEquity": 5,
+        "returnOnInvestedCapital": 3.5
+    },
+    {
+        "year": 2012,
+        "returnOnAssets": 20,
+        "returnOnEquity": 18,
+        "returnOnInvestedCapital": 17
+    },
+    {
+        "year": 2013,
+        "returnOnAssets": 30,
+        "returnOnEquity": 32,
+        "returnOnInvestedCapital": 35
+    },
+    {
+        "year": 2014,
+        "returnOnAssets": 31,
+        "returnOnEquity": 34,
+        "returnOnInvestedCapital": 36
+    },
+    {
+        "year": 2015,
+        "returnOnAssets": 40,
+        "returnOnEquity": 41,
+        "returnOnInvestedCapital": 42
+    },
+    {
+        "year": 2016,
+        "returnOnAssets": 15,
+        "returnOnEquity": 10,
+        "returnOnInvestedCapital": 14.7
+    },
+    {
+        "year": 2017,
+        "returnOnAssets": 20,
+        "returnOnEquity": 22.5,
+        "returnOnInvestedCapital": 23
+    },
+    {
+        "year": 2018,
+        "returnOnAssets": 26,
+        "returnOnEquity": 25.5,
+        "returnOnInvestedCapital": 27
+    },
+    {
+        "year": 2019,
+        "returnOnAssets": 8,
+        "returnOnEquity": 11,
+        "returnOnInvestedCapital": 12.3
+    }
+]

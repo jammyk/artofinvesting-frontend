@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import HomePage from './components/HomePage';
 import Screener from './components/Screener'
-import FinancialStatement from './components/FinancialStatement'
 import { Switch, Route } from 'react-router-dom';
 import DetailsPage from './components/DetailsPage';
 import TestPage from './TestPage';
