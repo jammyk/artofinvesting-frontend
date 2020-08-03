@@ -1,0 +1,29 @@
+.slider-btn {
+    display: flex;
+}
+
+.ant-col.ant-col-1.slider-btn-container:hover {
+    background-color: gainsboro;
+}
+
+.ant-col.ant-col-1.slider-btn-container {
+    display: inline-flex;
+    align-self: stretch;
+    align-items: center;
+}
+
+.ant-col.ant-col-1.slider-btn-container.left {
+    justify-content: flex-end;
+}
+
+.ant-col.ant-col-1.slider-btn-container.right {
+    justify-content: flex-start;
+}
+
+.anticon.anticon-left {
+    font-size: 20px;
+}
+
+.anticon.anticon-right {
+    font-size: 20px;
+}

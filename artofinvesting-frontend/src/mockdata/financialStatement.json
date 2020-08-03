@@ -1,0 +1,366 @@
+{
+  "companyCIK": 789019,
+  "companyName": "Microsoft Corporation",
+  "companyTicker": "MSFT",
+  "formType": "10-K",
+  "incomeStatements": [
+    {
+      "year": 2017,
+      "totalRevenue": 89950000,
+      "costOfRevenue": 34261000,
+      "grossProfit": 55689000,
+      "operatingExpenses": {
+        "researchAndDevelopment": 13037000,
+        "sellingGeneralAndAdmin": 20020000,
+        "totalOperatingExpense": 33057000
+      },
+      "operatingIncomeOrLoss": 22632000,
+      "totalNetOtherIncomeAndExpense": 2738000,
+      "interestExpense": 2222000,
+      "incomeBeforeTax": 23149000,
+      "incomeTaxExpense": 1945000,
+      "incomeFromContinuingOperations": 21204000,
+      "netIncome": 21204000,
+      "netIncomeAvailableToCommonShareholders": 21204000,
+      "basicEPS": 2.74,
+      "dilutedEPS": 2.71,
+      "basicAvgShares": 7746000,
+      "dilutedAvgShares": 7832000
+    },
+    {
+      "year": 2018,
+      "totalRevenue": 110360000,
+      "costOfRevenue": 38353000,
+      "grossProfit": 72007000,
+      "operatingExpenses": {
+        "researchAndDevelopment": 14726000,
+        "sellingGeneralAndAdmin": 22223000,
+        "totalOperatingExpense": 36949000	
+      },
+      "operatingIncomeOrLoss": 35058000	,
+      "totalNetOtherIncomeAndExpense": 4149000,
+      "interestExpense": 2733000,
+      "incomeBeforeTax": 36474000,
+      "incomeTaxExpense": 19903000,
+      "incomeFromContinuingOperations": 16571000,
+      "netIncome": 16571000,
+      "netIncomeAvailableToCommonShareholders": 16571000,
+      "basicEPS": 2.15,
+      "dilutedEPS": 2.13,
+      "basicAvgShares": 7700000,
+      "dilutedAvgShares": 7794000
+    },
+    {
+      "year": 2019,
+      "totalRevenue": 125843000,
+      "costOfRevenue": 42910000,
+      "grossProfit": 82933000,
+      "operatingExpenses": {
+        "researchAndDevelopment": 16876000,
+        "sellingGeneralAndAdmin": 23098000,
+        "totalOperatingExpense": 39974000
+      },
+      "operatingIncomeOrLoss": 42959000,
+      "totalNetOtherIncomeAndExpense": 3415000,
+      "interestExpense": 2686000,
+      "incomeBeforeTax": 43688000,
+      "incomeTaxExpense": 4448000,
+      "incomeFromContinuingOperations": 39240000,
+      "netIncome": 39240000,
+      "netIncomeAvailableToCommonShareholders": 39240000,
+      "basicEPS": 5.11,
+      "dilutedEPS": 5.06,
+      "basicAvgShares": 7673000,
+      "dilutedAvgShares": 7753000
+    }
+  ],
+  "balanceSheets": [
+      {
+          "year": 2017,
+          "assets": {
+              "currentAssets": {
+                  "cash": {
+                      "cashAndCashEquivalents": 7663000,
+                      "otherShortTermInvestments": 125318000,
+                      "totalCash": 132981000
+                  },
+                  "netReceivables": 19792000,
+                  "inventory": 2181000,
+                  "otherCurrentAssets": 4897000,
+                  "totalCurrentAssets": 159851000
+              },
+              "nonCurrentAssets": {
+                  "propertyPlantAndEquipment": {
+                      "grossPropertyPlantAndEquipment": 47913000,
+                      "accumulatedDepreciation": -24179000,
+                      "netPropertyPlantAndEquipment": 23734000
+                  },
+                  "equityAndOtherInvestments": 6023000,
+                  "goodwill": 35122000,
+                  "intangibleAssets": 10106000,
+                  "otherLongTermAssets": 6250000,
+                  "totalNonCurrentAssets": 81235000
+              },
+              "totalAssets": 241086000
+          },
+          "liabilitiesAndStockholdersEquity": {
+              "liabilities": {
+                  "currentLiabilities": {
+                      "currentDebt": 10121000,
+                      "accountsPayable": 7390000,
+                      "taxesPayable": 718000,
+                      "deferredRevenues": 34102000,
+                      "otherCurrentLiabilities": 6280000,
+                      "totalCurrentLiabilities": 64527000
+                  },
+                  "nonCurrentLiabilities": {
+                      "longTermDebt": 76073000,
+                      "deferredTaxesLiabilities": 531000,
+                      "deferredRevenues": 10377000,
+                      "otherLongTermLiabilities": 17184000,
+                      "totalNonCurrentLiabilities": 104165000
+                  },
+                  "totalLiabilities": 168692000
+              },
+              "stockholdersEquity": {
+                  "commonStock": 69315000,
+                  "retainedEarnings": 2648000,
+                  "accumulatedOtherComprehensiveIncome": 431000,
+                  "totalStockholdersEquity": 72394000
+              },
+              "totalLiabilitiesAndStockholdersEquity": 241086000
+          }
+      },
+      {
+          "year": 2018,
+          "assets": {
+              "currentAssets": {
+                  "cash": {
+                      "cashAndCashEquivalents": 11946000,
+                      "otherShortTermInvestments": 121822000,
+                      "totalCash": 133768000
+                  },
+                  "netReceivables": 26481000,
+                  "inventory": 2662000,
+                  "otherCurrentAssets": 6751000,
+                  "totalCurrentAssets": 169662000
+              },
+              "nonCurrentAssets": {
+                  "propertyPlantAndEquipment": {
+                      "grossPropertyPlantAndEquipment": 65369000,
+                      "accumulatedDepreciation": -29223000,
+                      "netPropertyPlantAndEquipment": 36146000
+                  },
+                  "equityAndOtherInvestments": 1862000,
+                  "goodwill": 35683000,
+                  "intangibleAssets": 8053000,
+                  "otherLongTermAssets": 7442000,
+                  "totalNonCurrentAssets": 89186000
+              },
+              "totalAssets": 258848000
+          },
+          "liabilitiesAndStockholdersEquity": {
+              "liabilities": {
+                  "currentLiabilities": {
+                      "currentDebt": 3998000,
+                      "accountsPayable": 8617000,
+                      "taxesPayable": 2121000,
+                      "deferredRevenues": 28905000,
+                      "otherCurrentLiabilities": 8744000,
+                      "totalCurrentLiabilities": 58488000
+                  },
+                  "nonCurrentLiabilities": {
+                      "longTermDebt": 72242000,
+                      "deferredTaxesLiabilities": 541000,
+                      "deferredRevenues": 3815000,
+                      "otherLongTermLiabilities": 5211000,
+                      "totalNonCurrentLiabilities": 117642000
+                  },
+                  "totalLiabilities": 176130000
+              },
+              "stockholdersEquity": {
+                  "commonStock": 71223000,
+                  "retainedEarnings": 13682000,
+                  "accumulatedOtherComprehensiveIncome": -2187000,
+                  "totalStockholdersEquity": 82718000
+              },
+              "totalLiabilitiesAndStockholdersEquity": 258848000
+          }
+      },
+      {
+          "year": 2019,
+          "assets": {
+              "currentAssets": {
+                  "cash": {
+                      "cashAndCashEquivalents": 11356000,
+                      "otherShortTermInvestments": 122463000,
+                      "totalCash": 133819000
+                  },
+                  "netReceivables": 29524000,
+                  "inventory": 2063000,
+                  "otherCurrentAssets": 10146000,
+                  "totalCurrentAssets": 175552000
+              },
+              "nonCurrentAssets": {
+                  "propertyPlantAndEquipment": {
+                      "grossPropertyPlantAndEquipment": 79186000,
+                      "accumulatedDepreciation": -35330000,
+                      "netPropertyPlantAndEquipment": 43856000
+                  },
+                  "equityAndOtherInvestments": 2649000,
+                  "goodwill": 42026000,
+                  "intangibleAssets": 7750000,
+                  "otherLongTermAssets": 14723000,
+                  "totalNonCurrentAssets": 111004000
+              },
+              "totalAssets": 286556000
+          },
+          "liabilitiesAndStockholdersEquity": {
+              "liabilities": {
+                  "currentLiabilities": {
+                      "currentDebt": 5516000,
+                      "accountsPayable": 9382000,
+                      "taxesPayable": 5665000,
+                      "deferredRevenues": 32676000,
+                      "otherCurrentLiabilities": 9351000,
+                      "totalCurrentLiabilities": 69420000
+                  },
+                  "nonCurrentLiabilities": {
+                      "longTermDebt": 66662000,
+                      "deferredTaxesLiabilities": 233000,
+                      "deferredRevenues": 4530000,
+                      "otherLongTermLiabilities": 7581000,
+                      "totalNonCurrentLiabilities": 114806000
+                  },
+                  "totalLiabilities": 184226000
+              },
+              "stockholdersEquity": {
+                  "commonStock": 78520000,
+                  "retainedEarnings": 24150000,
+                  "accumulatedOtherComprehensiveIncome": -340000,
+                  "totalStockholdersEquity": 102330000
+              },
+              "totalLiabilitiesAndStockholdersEquity": 286556000
+          }
+      }
+  ],
+  "cashFlowStatements": [
+      {
+        "year": 2017,
+        "cashFromOperation": {
+          "netIncome": 21204000,
+          "depreciationAndAmortization": 8778000,
+          "deferredIncomeTaxes": -3296000,
+          "stockBasedCompensation": 3266000,
+          "changeInWorkingCapital": 69363000,
+          "accountsReceivable": -925000,
+          "inventory": 50000,
+          "accountsPayable": 81000,
+          "otherOperations": 31378000,
+          "netCashFromOperations": 39507000
+        },
+        "cashFromInvesting": {
+          "ppe": -8129000,
+          "netAcquisitions": -25944000,
+          "purchaseOfInvestments": -176905000,
+          "disposalOfInvestments": 164394000,
+          "otherInvesting": -197000,
+          "netCashFromInvesting": -46781000
+        },
+        "cashFromFinancing": {
+          "debtRepayment": -7922000,
+          "commonStockIssuance": 772000,
+          "commonStockRepurchase": -11788000,
+          "dividendsPaid": -11845000,
+          "otherFinancing": -190000,
+          "netCashFromFinancing": 8408000
+        },
+        "netChangeInCash": 1153000,
+        "cashAtBeginning": 6510000,
+        "cashAtEnd": 7663000,
+        "freeCashFlow": {
+          "operatingCashFlow": 39507000,
+          "capEx": -8129000,
+          "totalFreeCashFlow": 31378000
+        }
+      },
+      {
+        "year": 2018,
+        "cashFromOperation": {
+          "netIncome": 16571000,
+          "depreciationAndAmortization": 10261000,
+          "deferredIncomeTaxes": 13040000,
+          "stockBasedCompensation": 3940000,
+          "changeInWorkingCapital": 2284000,
+          "accountsReceivable": -3862000,
+          "inventory": -465000,
+          "accountsPayable": 1148000,
+          "otherOperations": 32252000,
+          "netCashFromOperations": 43884000
+        },
+        "cashFromInvesting": {
+          "ppe": -11632000,
+          "netAcquisitions": -888000,
+          "purchaseOfInvestments": -137380000,
+          "disposalOfInvestments": 143937000,
+          "otherInvesting": -98000,
+          "netCashFromInvesting": -6061000
+        },
+        "cashFromFinancing": {
+          "debtRepayment": -10060000,
+          "commonStockIssuance": 1002000,
+          "commonStockRepurchase": -10721000,
+          "dividendsPaid": -12699000,
+          "otherFinancing": -971000,
+          "netCashFromFinancing": -33590000
+        },
+        "netChangeInCash": 4283000,
+        "cashAtBeginning": 7663000,
+        "cashAtEnd": 11946000,
+        "freeCashFlow": {
+          "operatingCashFlow": 43884000,
+          "capEx": -11632000,
+          "totalFreeCashFlow": 32252000
+        }
+      },
+      {
+        "year": 2019,
+        "cashFromOperation": {
+          "netIncome": 39240000,
+          "depreciationAndAmortization": 11682000,
+          "deferredIncomeTaxes": -3534000,
+          "stockBasedCompensation": 4652000,
+          "changeInWorkingCapital": 937000,
+          "accountsReceivable": -2812000,
+          "inventory": 597000,
+          "accountsPayable": 232000,
+          "otherOperations": 38260000,
+          "netCashFromOperations": 52185000
+        },
+        "cashFromInvesting": {
+          "ppe": -13925000,
+          "netAcquisitions": -2388000,
+          "purchaseOfInvestments": -57697000,
+          "disposalOfInvestments": 58237000,
+          "otherInvesting": 0,
+          "netCashFromInvesting": -15773000
+        },
+        "cashFromFinancing": {
+          "debtRepayment": -4000000,
+          "commonStockIssuance": 1142000,
+          "commonStockRepurchase": -19543000,
+          "dividendsPaid": -13811000,
+          "otherFinancing": -675000,
+          "netCashFromFinancing": -36887000
+        },
+        "netChangeInCash": -590000,
+        "cashAtBeginning": 11946000,
+        "cashAtEnd": 11356000,
+        "freeCashFlow": {
+          "operatingCashFlow": 52185000,
+          "capEx": -13925000,
+          "totalFreeCashFlow": 38260000
+        }
+      }
+    ]
+}
