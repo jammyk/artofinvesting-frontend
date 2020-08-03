@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Tabs, Row, Col, Affix } from 'antd';
 import { Link } from 'react-router-dom';
-import logo from '../images/aoi_logo.png';
-import SignInButton from './SignInButton';
-import '../stylesheets/NavBar.css';
+import logo from '../../images/aoi_logo.png';
+import SignInButton from '../SignInButton';
+import '../../stylesheets/NavBar.css';
 
 const { TabPane } = Tabs;
 
@@ -17,8 +17,10 @@ export default class NavBar extends Component {
     render() {
         return (
             <div>
-                <Affix offsetTop={10}>
-                    <Row align="middle" justify="start" type="flex" gutter={0}>
+                <Affix>
+                    {/* affix offset creates gap, white block used to fill gap & act as offset */}
+                    <div style={{ height: 10, backgroundColor: 'white'}} />
+                    <Row align="middle" justify="start" type="flex" gutter={0} style={{ backgroundColor: 'white' }}>
                         <Col span={2}>
                             <div className="navBar_logo">
                                 <Link to="/"><img src={logo} className="AOI-logo" alt="logo" height={'75px'} /></Link>
@@ -34,7 +36,7 @@ export default class NavBar extends Component {
                         </Col>
                         <Col span={3}>
                             <div className="navbar_signin">
-                            <SignInButton></SignInButton>
+                                <SignInButton></SignInButton>
                             </div>
                         </Col>
                     </Row>

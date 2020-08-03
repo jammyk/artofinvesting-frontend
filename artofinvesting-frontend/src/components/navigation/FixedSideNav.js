@@ -49,7 +49,7 @@ export default class FixedSideNav extends Component {
                 >
                     <Link href="#financial-statements" title="Financial Statements" />
                     <Link href="#metrics" title="Metrics" />
-                    <Link href="#sharesOutstnding" title="Shares Outstanding" />
+                    <Link href="#shares" title="Shares Outstanding" />
                 </Anchor>
             </div>
         )
