@@ -4,7 +4,7 @@ const cookies = new Cookies();
 
 const HEADER_PAYLOAD_COOKIE = 'jwt_header_payload';
 const SIGNATURE_COOKIE = 'jwt_signature';
-const MAX_AGE = 5;
+const MAX_AGE = 1800;
 
 // header.payload.signature
 
@@ -17,6 +17,12 @@ export const authenticate = async () => {
     if (getHeaderPayloadCookie()) {
         cookies.set(HEADER_PAYLOAD_COOKIE, 'something', { secure: true, maxAge: MAX_AGE, sameSite: true })
         cookies.set(SIGNATURE_COOKIE, 'value', { secure: true, httpOnly: true, sameSite: true })
+    }
+}
+
+export const signOut = () => {
+    if (isAuthenticated()) {
+        cookies.remove(HEADER_PAYLOAD_COOKIE);
     }
 }
 

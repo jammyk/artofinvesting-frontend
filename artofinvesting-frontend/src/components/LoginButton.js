@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button } from 'antd';
 import LoginModal from './authentication/LoginModal';
 import AuthenticatedAlternative from './authentication/AuthenticatedAlternative';
+import UserButton from './protected/UserButton';
 
 export default class LoginButton extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ export default class LoginButton extends Component {
                 <AuthenticatedAlternative authenticatedChildren={this.state.authenticatedChildrenKey}>
                     <Button type="primary" onClick={this.onSignInButtonClick}>Sign in</Button>
                     <LoginModal toggleModal={this.toggleLoginModal} isModalVisible={this.state.isLoginVisible} />
-                    <Button key={'authenticatedLoginButton'}>Hello Mr.Smith</Button>
+                    <UserButton key={'authenticatedLoginButton'}></UserButton>
                 </AuthenticatedAlternative>
             </div>
         )

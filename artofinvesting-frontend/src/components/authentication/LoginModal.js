@@ -17,10 +17,11 @@ class LoginModal extends Component {
 
 
     handleCancel = (e) => {
-        this.setModalVisibility(false);
         if (this.props.toggleModal) {
             this.props.toggleModal(false);
         } else {
+            this.setModalVisibility(false);
+            window.location.reload(false);
             this.props.history.push('/');
         }
     }
@@ -38,7 +39,7 @@ class LoginModal extends Component {
                     cancelButtonProps={{ style: { display: 'none' } }}
                     okButtonProps={{ style: { display: 'none' } }}
                 >
-                    <LoginForm toggleModal={this.handleCancel}/>
+                    <LoginForm toggleModal={this.handleCancel} />
                 </Modal>
             </div >
         )

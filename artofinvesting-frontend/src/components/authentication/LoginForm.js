@@ -39,6 +39,7 @@ class LoginForm extends Component {
             message.success('successfully logged in');
             this.props.toggleModal(false);
             this.props.history.push('/');
+            window.location.reload(false);
         } else {
             message.error('login credentials do not match our records');
         }

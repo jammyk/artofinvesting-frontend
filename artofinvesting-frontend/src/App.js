@@ -8,9 +8,12 @@ import TestPage from './TestPage';
 import LoginModal from './components/authentication/LoginModal';
 import Registration from './components/Registration';
 import UserRecoverPassword from './components/UserRecoverPassword';
+import Authenticated from './components/authentication/Authenticated';
+import UserProfile from './components/protected/UserProfile';
+import UserWatchlist from './components/protected/UserWatchlist';
+
 
 export default class App extends Component {
-
   render() {
     return (
       <div className="App">
@@ -31,6 +34,10 @@ export default class App extends Component {
           <Route path='/test' component={TestPage} />
           <Route path='/register' component={Registration} />
           <Route path='/forgotpass' component={UserRecoverPassword} />
+          <Authenticated>
+            <Route path='/profile' component={UserProfile} />
+            <Route path='/watchlist' component={UserWatchlist} />
+          </Authenticated>
         </Switch>
       </div>
     );
