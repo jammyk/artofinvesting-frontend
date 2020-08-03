@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
 import { Tabs, Row, Col, Affix } from 'antd';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD:artofinvesting-frontend/src/components/navigation/NavBar.js
 import logo from '../../images/aoi_logo.png';
-import SignInButton from '../SignInButton';
+import LoginButton from '../LoginButton';
 import '../../stylesheets/NavBar.css';
-=======
-import logo from '../images/aoi_logo.png';
-import LoginButton from './LoginButton';
-import '../stylesheets/NavBar.css';
->>>>>>> master:artofinvesting-frontend/src/components/NavBar.js
 
 const { TabPane } = Tabs;
 
@@ -42,11 +36,7 @@ export default class NavBar extends Component {
                         </Col>
                         <Col span={3}>
                             <div className="navbar_signin">
-<<<<<<< HEAD:artofinvesting-frontend/src/components/navigation/NavBar.js
-                                <SignInButton></SignInButton>
-=======
                                 <LoginButton />
->>>>>>> master:artofinvesting-frontend/src/components/NavBar.js
                             </div>
                         </Col>
                     </Row>
