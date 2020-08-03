@@ -3,16 +3,15 @@ import { Button, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 import logo from '../../images/aoi_logo.png';
 import CompanySearchBar from '../CompanySearchBar';
-import SignInButton from '../SignInButton';
+import LoginButton from '../LoginButton';
 
 class HomePage extends Component {
-
     render() {
         return (
             <div>
                 <Row style={{ "paddingTop": "20px" }} type="flex" justify="end" align="bottom">
                     <Col pull={1}>
-                        <SignInButton/>
+                        <LoginButton />
                     </Col>
                 </Row>
                 <Row justify="center" align="top" style={{ "paddingTop": "100px" }}>

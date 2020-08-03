@@ -1,13 +1,49 @@
 import React, { Component } from 'react'
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { Link, withRouter } from 'react-router-dom';
+import { testAuthentication } from '../../helpers/authentication';
 
-export default class LoginForm extends Component {
+class LoginForm extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            username: '',
+            password: ''
+        };
+
+        this.onFinish = this.onFinish.bind(this);
+    }
 
     onFinish(values) {
         console.log('Received values of form: ', values);
-    }
 
+        // axios.post(http://localhost:3001/registration, {
+        //     user: {
+        //         email: username,
+        //         password: password
+        //     }
+        // },
+        //     { withCredentials: true }).then(response => {
+        //         localStorage.setItem('jwt', rest.data);
+        //         console.log("Login result", repsonse);
+        //     }).catch(error => {
+        //         console.log("Login error", error);
+        //     });
+
+        // axios.post().then()
+        if (values.username === 'test' && values.password === 'test') {
+            testAuthentication();
+            message.success('successfully logged in');
+            this.props.toggleModal(false);
+            this.props.history.push('/');
+            window.location.reload(false);
+        } else {
+            message.error('login credentials do not match our records');
+        }
+    }
 
     render() {
         return (
@@ -16,7 +52,7 @@ export default class LoginForm extends Component {
                     name="normal_login"
                     className="login-form"
                     initialValues={{
-                        remember: true,
+                        remember: false,
                     }}
                     onFinish={this.onFinish}
                 >
@@ -51,19 +87,21 @@ export default class LoginForm extends Component {
                             <Checkbox>Remember me</Checkbox>
                         </Form.Item>
 
-                        <a className="login-form-forgot" href="">
+                        <Link to='/forgotpass'>
                             Forgot password
-                        </a>
+                        </Link>
                     </Form.Item>
 
                     <Form.Item>
                         <Button type="primary" htmlType="submit" className="login-form-button">
                             Log in
                         </Button>
-                        Or <a href="">register now!</a>
+                        Or <Link to='/register'>register now!</Link>
                     </Form.Item>
                 </Form>
-            </div>
+            </div >
         )
     }
 }
+
+export default withRouter(LoginForm);
