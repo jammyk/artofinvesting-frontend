@@ -16,6 +16,7 @@ function App() {
           <Route path='/screeners' component={Screener}/>
           <Route path='/details' component={DetailsPage}/>
           <Route path='/test' component={TestPage} />
+          <Route path='/details' component={DetailsPage} />
         </Switch>
       </div>
   );
