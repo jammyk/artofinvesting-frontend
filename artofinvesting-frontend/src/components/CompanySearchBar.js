@@ -4,7 +4,13 @@ import { SearchOutlined } from '@ant-design/icons';
 
 export default class CompanySearchBar extends Component {
 
-
+    constructor(props) {
+        super(props);
+        this.state = { 
+            searchValue: '',
+            options: [],
+        }
+    }
 
     mockVal(str, repeat=1) {
         return { value: str.repeat(repeat) };
