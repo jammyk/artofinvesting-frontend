@@ -1,0 +1,17 @@
+.yearInput{
+    width: 10%;
+}
+
+.cashFlowInputBox{
+    width: 75%;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.resultBtn{
+    margin-right: 5%;
+}
+
+.addMoreYearsBtn{
+    margin-top: 3%;
+}
