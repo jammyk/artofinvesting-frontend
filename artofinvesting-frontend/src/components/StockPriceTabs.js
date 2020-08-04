@@ -26,22 +26,22 @@ export default class StockPriceTabs extends Component {
     computeDollarChange(dateDelta) {
         // todo for now using switch
         if (dateDelta === 1) {
-            return '84.33';
+            return 84.33;
         } else if (dateDelta === 5) {
-            return '169.80';
+            return 169.80;
         } else {
-            return '216.44';
+            return 216.44;
         }
     }
 
     computePercentChange(dateDelta) {
         // todo for now using switch
-        if (dateDelta == 1) {
-            return '0.6378'
+        if (dateDelta === 1) {
+            return 0.6378;
         } else if (dateDelta === 5) {
-            return '3.6329'
+            return 3.6329;
         } else {
-            return '2164.4';
+            return 2164.4;
         }
     }
 

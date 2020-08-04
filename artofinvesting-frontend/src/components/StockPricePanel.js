@@ -5,7 +5,7 @@ const { Text } = Typography;
 export default class StockPricePanel extends Component {
 
     computePercentChangeString(percentChange) {
-        return percentChange < 0 ? '' : '+' + Math.round((percentChange + Number.EPSILON) * 100) + '%';
+        return percentChange < 0 ? '' : '+' + Math.round((percentChange + Number.EPSILON) * 10000) / 100 + '%';
     }
 
     computeDollarChangeString(dollarChange) {

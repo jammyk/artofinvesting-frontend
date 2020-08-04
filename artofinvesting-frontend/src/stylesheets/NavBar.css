@@ -1,11 +1,15 @@
-.navbar_logo {
+.navbar-logo {
     margin: 0 auto;
 }
 
-.navbar_tabs {
+.navbar-tabs {
     padding-left: 16px;
 }
 
-.navbar_signin {
+.navbar-signin {
     float: right;
+}
+
+.navbar-affix-default {
+
 }
