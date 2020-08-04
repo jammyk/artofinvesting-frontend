@@ -25,7 +25,7 @@ class ComposedGraph extends Component {
                         <CartesianGrid stroke={colors.white} />
                         {this.props.leftBarKey &&
                             <Bar dataKey={this.props.leftBarKey} barSize={20} fill={colors.blue1}>
-                                <LabelList dataKey={this.props.leftBarKey} position='top'/>
+                                <LabelList dataKey={this.props.leftBarKey} position='top'   />
                             </Bar>}
                         {this.props.rightBarKey && <Bar dataKey={this.props.rightBarKey} barSize={20} fill={colors.blue3} />}
                         {this.props.lineKey && <Line dataKey={this.props.lineKey} stroke={colors.blue5} />}

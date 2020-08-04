@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Tabs, Row, Col, Affix } from 'antd';
 import { Link } from 'react-router-dom';
 import logo from '../images/aoi_logo.png';
-import SignInButton from './SignInButton';
+import LoginButton from './LoginButton';
 import '../stylesheets/NavBar.css';
 
 const { TabPane } = Tabs;
@@ -34,7 +34,7 @@ export default class NavBar extends Component {
                         </Col>
                         <Col span={3}>
                             <div className="navbar_signin">
-                            <SignInButton></SignInButton>
+                                <LoginButton />
                             </div>
                         </Col>
                     </Row>

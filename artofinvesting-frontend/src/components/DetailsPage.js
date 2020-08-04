@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import FixedSideNav from './FixedSideNav'
 import { Row, Col } from 'antd'
 import FinancialStatement from './FinancialStatement'
+import Calculator from './Calculator'
 
 export default class DetailsPage extends Component {
     render() {
@@ -87,6 +88,7 @@ export default class DetailsPage extends Component {
                     </p>
                     </Col>
                     </Row>
+                    <Calculator/>
             </div>
         )
     }
