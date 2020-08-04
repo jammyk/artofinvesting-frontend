@@ -10,6 +10,7 @@ import SharesGraph from '../graphs/SharesGraph'
 import shareData from '../../mockdata/sharesOutstanding.json';
 import '../../stylesheets/DetailsPage.css';
 import HistoricStockPriceGraph from '../graphs/HistoricStockPriceGraph'
+import Calculator from '../Calculator'
 
 
 const { Title, Text } = Typography;
@@ -97,6 +98,7 @@ export default class DetailsPage extends Component {
                         </Card>
                     </Col>
                 </Row>
+                <Calculator />
             </div >
         )
     }
