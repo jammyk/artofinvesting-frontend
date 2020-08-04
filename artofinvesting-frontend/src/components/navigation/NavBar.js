@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Tabs, Row, Col, Affix, Button } from 'antd';
+import { Tabs, Row, Col, Affix, Button, Typography, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import logo from '../../images/aoi_logo.png';
 import LoginButton from '../LoginButton';
 import '../../stylesheets/NavBar.css';
 const { TabPane } = Tabs;
-
+const { Text } = Typography;
 
 export default class NavBar extends Component {
 
@@ -25,17 +25,19 @@ export default class NavBar extends Component {
             <Affix onChange={this.callBack}>
                 {/* affix offset creates gap, white block used to fill gap & act as offset */}
                 <div style={{ height: 10, backgroundColor: 'white' }} />
-                <Row align="middle" justify="start" type="flex" gutter={0} style={{ backgroundColor: 'transparent ' }}>
-                    <Col span={2}>
+                <Row align="middle" justify="start" type="flex" gutter={0} style={{ backgroundColor: 'white ' }}>
+                    <Col span={2} offset={3} order={1}>
                         <div className="navBar-logo">
                             <Link to="/"><img src={logo} className="AOI-logo" alt="logo" height={'75px'} /></Link>
                         </div>
                     </Col>
-                    <Col span={18}>
-                        <Link to="/screeners"><Button>Screeners</Button></Link>
-                        <Link to="/"><Button>Artists</Button></Link>
+                    <Col span={5} offset={10} order={2}>
+                        <Menu mode="horizontal" style={{ width: 185}}>
+                            <Menu.Item><Link to="/screeners"><Text>Screeners</Text></Link></Menu.Item>
+                            <Menu.Item><Link to="/">Artists</Link></Menu.Item>
+                        </Menu>
                     </Col>
-                    <Col span={3}>
+                    <Col span={3} order={3} pull={1}>
                         <div className="navbar-signin">
                             <LoginButton />
                         </div>
