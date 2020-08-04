@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { ResponsiveContainer, LineChart, XAxis, YAxis, Line, CartesianAxis } from 'recharts'
+import { ResponsiveContainer, AreaChart, XAxis, YAxis, CartesianAxis, Area } from 'recharts'
 import { Tooltip } from 'antd'
-import { WHITE, BLUE1 } from '../../constants/colors'
+import { WHITE, BLUE1, DARK_LIVER, ISABELLINE } from '../../constants/colors'
 
 export default class HistoricStockPriceGraph extends Component {
 
@@ -44,13 +44,13 @@ export default class HistoricStockPriceGraph extends Component {
     render() {
         return (
             <ResponsiveContainer width={'100%'} height={280}>
-                <LineChart data={this.state.data} >
+                <AreaChart data={this.state.data} >
                     <XAxis dataKey={'time'} />
                     <YAxis hide={true} domain={['dataMin - 10', 'dataMax + 10']} />
                     <Tooltip />
                     <CartesianAxis stroke={WHITE}/>
-                    <Line dataKey={'price'} stroke={'green'} />
-                </LineChart>
+                    <Area dataKey={'price'} fill={'#1BEE5E'} stroke={ISABELLINE}/>
+                </AreaChart>
             </ResponsiveContainer>
         )
     }
