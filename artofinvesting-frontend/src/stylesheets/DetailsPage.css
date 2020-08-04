@@ -1,0 +1,33 @@
+.microsoft-header {
+    background-image: url('../images/microsoft_example_photo.jpg');
+}
+
+.parallax {
+     /* The image used */
+
+  /* Full height */
+  width: 100%;
+  height: 700px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+    background-image: url('../images/microsoft_example_photo.jpg');
+}
+
+.financial-statement {
+    background-image: url('../images/example_picture.jpg');
+}
+
+.metrics-separator {
+    background-image: url('../images/example_picture2.jpg');
+}
+
+.share-separator {
+    background-image: url('../images/example_picture3.jpg');
+}

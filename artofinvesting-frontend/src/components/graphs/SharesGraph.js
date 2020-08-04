@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { ResponsiveContainer, XAxis, CartesianGrid, YAxis, Legend, Bar, BarChart } from 'recharts'
+import { ResponsiveContainer, XAxis, CartesianGrid, YAxis, Legend, Bar, BarChart, LabelList } from 'recharts'
 import { Tooltip } from 'antd'
+import { BLUE1 } from '../../constants/colors'
 
 export default class SharesGraph extends Component {
   render() {
@@ -12,7 +13,9 @@ export default class SharesGraph extends Component {
                 <Tooltip />
                 <Legend verticalAlign='bottom' align='right' />
                 <CartesianGrid stroke={'white'} />
-                <Bar dataKey={this.props.barKey} />
+                <Bar dataKey={this.props.barKey} fill={BLUE1} barSize={50}>
+                <LabelList dataKey={this.props.barKey} position='top'/>
+                </Bar>
             </BarChart>
         </ResponsiveContainer>
     )

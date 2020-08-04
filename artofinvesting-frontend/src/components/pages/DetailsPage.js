@@ -7,8 +7,13 @@ import MetricsPanel from '../metrics/MetricsPanel'
 import MetricGraph from '../graphs/MetricGraph'
 import data from '../../mockdata/metricsData.json';
 import SharesGraph from '../graphs/SharesGraph'
+import shareData from '../../mockdata/sharesOutstanding.json';
+import '../../stylesheets/DetailsPage.css';
+import HistoricStockPriceGraph from '../graphs/HistoricStockPriceGraph'
 
-const { Title } = Typography;
+
+const { Title, Text } = Typography;
+
 
 export default class DetailsPage extends Component {
     constructor(props) {
@@ -27,33 +32,72 @@ export default class DetailsPage extends Component {
     render() {
         return (
             <div>
-                <NavBar />
-                <Card id="title">
-                    <div className="companyTitle" style={{ textAlign: 'left', paddingLeft: 150, paddingTop: 20 }}>
-                        <Title level={1} style={{ color: '#1890ff' }}>{this.state.companyTicker + ' - ' + this.state.companyFullName}</Title>
-                        <Title level={3}>{'$' + this.state.companySharePrice}</Title>
-                    </div>
-                </Card>
-                <div>
-                    <Row>
-                        <Col push={1} span={4}>
-                            <FixedSideNav />
-                        </Col>
-                        <Col span={18}>
-                            <Card title='Financial Statements' id='financial-statements' headStyle={{ textAlign: 'left' }}>
-                                <FinancialStatement />
-                            </Card>
-                            <Card title='Metrics' id='metrics' headStyle={{ textAlign: 'left' }} bodyStyle={{ justifyContent: 'center' }}>
-                                <MetricsPanel />
-                                <MetricGraph data={data} lineOne={'returnOnAssets'} lineTwo={'returnOnEquity'} lineThree={'returnOnInvestedCapital'} />
-                            </Card>
-                            <Card title='Shares Outstanding' id='shares' headStyle={{ textAlign: 'left' }}>
-                                <SharesGraph />
-                            </Card>
-                        </Col>
-                    </Row>
-                </div>
-            </div>
+                <Row>
+                    <Col span={24}>
+                        <NavBar />
+                    </Col>
+                </Row>
+                <Row className="details-historic-pricing">
+                    <Col span={19} push={3}>
+                        <Card id="title" bordered={false}>
+                            <div className="companyTitle" style={{ textAlign: 'left', paddingTop: 20 }}>
+                                <p style={{ marginBottom: '0em', fontSize: 40 }}><Text>{this.state.companyFullName}</Text></p>
+                                <p style={{ marginBottom: '0.5em', fontSize: 40 }}><Text>{'$' + this.state.companySharePrice}</Text></p>
+                            </div>
+                            <HistoricStockPriceGraph></HistoricStockPriceGraph>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span={24}>
+                        <div className="parallax financial-statement" />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span={19} push={3}>
+                        <Card
+                            title='Financial Statements'
+                            id='financial-statements'
+                            headStyle={{ textAlign: 'left' }}
+                            bordered={false}
+                        >
+                            <FinancialStatement />
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span={24}><div className="parallax metrics-separator" /></Col>
+                </Row>
+                <Row>
+                    <Col span={19} push={3}>
+                        <Card
+                            title='Metrics'
+                            id='metrics'
+                            headStyle={{ textAlign: 'left' }}
+                            bodyStyle={{ justifyContent: 'center' }}
+                            bordered={false}
+                        >
+                            <MetricsPanel />
+                            <MetricGraph xAxis='year' data={data} lineOne={'returnOnAssets'} lineTwo={'returnOnEquity'} lineThree={'returnOnInvestedCapital'} />
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span={24}><div className="parallax share-separator" /></Col>
+                </Row>
+                <Row>
+                    <Col span={19} push={3}>
+                        <Card
+                            title='Shares Outstanding'
+                            id='shares'
+                            headStyle={{ textAlign: 'left' }}
+                            bordered={false}
+                        >
+                            <SharesGraph xAxis='year' data={shareData} barKey="sharesOutStnding" />
+                        </Card>
+                    </Col>
+                </Row>
+            </div >
         )
     }
 }
