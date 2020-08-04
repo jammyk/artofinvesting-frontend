@@ -35,7 +35,6 @@ export default class HistoricStockPriceGraph extends Component {
                 {
                     'time': 'Aug 3',
                     'price': 211.65
-
                 }
             ]
         })
@@ -49,7 +48,7 @@ export default class HistoricStockPriceGraph extends Component {
                     <YAxis hide={true} domain={['dataMin - 10', 'dataMax + 10']} />
                     <Tooltip />
                     <CartesianAxis stroke={WHITE}/>
-                    <Area dataKey={'price'} fill={'#1BEE5E'} stroke={ISABELLINE}/>
+                    <Area dataKey={'price'} fill={'#0086ff'} stroke={"#0062B8"}/>
                 </AreaChart>
             </ResponsiveContainer>
         )

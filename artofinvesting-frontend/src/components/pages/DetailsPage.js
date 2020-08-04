@@ -11,6 +11,8 @@ import shareData from '../../mockdata/sharesOutstanding.json';
 import '../../stylesheets/DetailsPage.css';
 import HistoricStockPriceGraph from '../graphs/HistoricStockPriceGraph'
 import Calculator from '../Calculator'
+import StockPricePanel from '../StockPricePanel'
+import StockPriceTabs from '../StockPriceTabs'
 
 
 const { Title, Text } = Typography;
@@ -41,11 +43,7 @@ export default class DetailsPage extends Component {
                 <Row className="details-historic-pricing">
                     <Col span={19} push={3}>
                         <Card id="title" bordered={false}>
-                            <div className="companyTitle" style={{ textAlign: 'left', paddingTop: 20 }}>
-                                <p style={{ marginBottom: '0em', fontSize: 40 }}><Text>{this.state.companyFullName}</Text></p>
-                                <p style={{ marginBottom: '0.5em', fontSize: 40 }}><Text>{'$' + this.state.companySharePrice}</Text></p>
-                            </div>
-                            <HistoricStockPriceGraph></HistoricStockPriceGraph>
+                            <StockPriceTabs companyName={this.state.companyFullName}/>
                         </Card>
                     </Col>
                 </Row>
