@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import 'antd/dist/antd.css';
 import '../stylesheets/Calculator.css'
 import { CalculatorOutlined } from '@ant-design/icons'
+import '../constants/colors'
 import { Affix, Drawer, Button, Popover, Steps, Row, Col, Typography, InputNumber, Slider, Tooltip } from 'antd'
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as ChartTooltip } from 'recharts'
+import { GREEN1 } from '../constants/colors';
 
 
 const { Step } = Steps
@@ -380,7 +382,7 @@ class Calculator extends Component {
                                         <XAxis dataKey="year" />
                                         <YAxis />
                                         <ChartTooltip />
-                                        <Bar dataKey="cashFlow" fill="#82ca9d" />
+                                        <Bar dataKey="cashFlow" fill={GREEN1} />
                                     </BarChart>
                                 </ResponsiveContainer>
                             </Col>
@@ -397,7 +399,7 @@ class Calculator extends Component {
                                         <XAxis dataKey="year" />
                                         <YAxis />
                                         <ChartTooltip />
-                                        <Bar dataKey="cashFlow" fill="#82ca9d" />
+                                        <Bar dataKey="cashFlow" fill={GREEN1} />
                                     </BarChart>
                                 </ResponsiveContainer>
                             </Col>
