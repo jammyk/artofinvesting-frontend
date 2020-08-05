@@ -24,6 +24,7 @@ class HomePage extends Component {
                 </Row>
                 <div style={{ "paddingTop": "20px" }}>
                     <Link to="/screeners"><Button type="default">Screeners</Button></Link>
+                    <Link to="/artist_search"><Button type="default">Artists</Button></Link>
                 </div>
             </div>
         );

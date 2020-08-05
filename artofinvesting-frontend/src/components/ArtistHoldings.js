@@ -30,11 +30,11 @@ function sortQuarter(a, b) {
 };
 
 function sortReport(a, b) {
-    var num_a = Number(a.split("-"));
-    var num_b = Number(b.split("-"));
-    if (a < b) {
+    var num_a = Number(a.replaceAll("-", ""));
+    var num_b = Number(b.replaceAll("-", ""));
+    if (num_a < num_b) {
         return -1;
-    } else if (a > b) {
+    } else if (num_a > num_b) {
         return 1;
     } else return 0;
 };
@@ -52,56 +52,56 @@ const columns = [
       // here is that finding the name started with `value`
       //onFilter: (value, record) => record.name.indexOf(value) === 0,
       sorter: (a, b) => sortName(a.name, b.name),
-      sortDirections: ['descend', 'ascend', 'descend'],
+      //sortDirections: ['descend', 'ascend', 'descend'],
     },
     {
       title: 'Amnt of Shares Held',
       dataIndex: 'amount',
       sorter: (a, b) => a.amount - b.amount,
-      sortDirections: ['descend', 'ascend', 'descend'],
+      sortDirections: ['descend', 'ascend'],
     },
     {
       title: 'Market Val',
       dataIndex: 'market_val',
       sorter: (a, b) => a.market_val - b.market_val,
-      sortDirections: ['descend', 'ascend', 'descend'],
+      sortDirections: ['descend', 'ascend'],
     },
     {
       title: '% of Portfolio',
       dataIndex: 'portfolio',
       defaultSortOrder: 'descend',
       sorter: (a, b) => a.portfolio - b.portfolio,
-      sortDirections: ['descend', 'ascend', 'descend'],
+      sortDirections: ['descend', 'ascend'],
     },
     {
         title: '% Ownership',
         dataIndex: 'ownership',
         sorter: (a, b) => a.ownership - b.ownership,
-        sortDirections: ['descend', 'ascend', 'descend'],
+        sortDirections: ['descend', 'ascend'],
     },
     {
         title: '1st Qtr',
         dataIndex: 'first_quarter',
         sorter: (a, b) => sortQuarter(a.first_quarter, b.first_quarter),
-        sortDirections: ['descend', 'ascend', 'descend'],
+        sortDirections: ['descend', 'ascend'],
     },
     {
         title: 'Estimated Price',
         dataIndex: 'est_price',
         sorter: (a, b) => a.est_price - b.est_price,
-        sortDirections: ['descend', 'ascend', 'descend'],
+        sortDirections: ['descend', 'ascend'],
     },
     {
         title: 'Reported',
         dataIndex: 'reported',
         sorter: (a, b) => sortReport(a.reported, b.reported),
-        sortDirections: ['descend', 'ascend', 'descend'],
+        sortDirections: ['descend', 'ascend'],
     },
     {
         title: 'Source Data',
         dataIndex: 'source',
         sorter: (a, b) => sortSource(a.source, b.source),
-        sortDirections: ['descend', 'ascend', 'descend'],
+        sortDirections: ['descend', 'ascend'],
     },
 ];
   
@@ -133,7 +133,7 @@ const data = [
     {
         key: '3',
         name: 'FB',
-        amount: 32,
+        amount: 15,
         market_val: 6000,
         portfolio: 20,
         ownership: 0.0001,
@@ -145,7 +145,7 @@ const data = [
     {
         key: '4',
         name: 'AMZN',
-        amount: 32,
+        amount: 90,
         market_val: 3000,
         portfolio: 0.5,
         ownership: 0.5,

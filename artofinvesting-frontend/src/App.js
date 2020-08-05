@@ -12,6 +12,8 @@ import UserRecoverPassword from './components/UserRecoverPassword';
 import Authenticated from './components/authentication/Authenticated';
 import UserProfile from './components/protected/UserProfile';
 import UserWatchlist from './components/protected/UserWatchlist';
+import ArtistSearch from './components/ArtistSearch';
+import ArtistResult from './components/ArtistResult';
 
 
 export default class App extends Component {
@@ -30,6 +32,8 @@ export default class App extends Component {
             render={props => (
               <LoginModal {...props} isModalVisible={true} />
             )} />
+          <Route path='/artist_search' component={ArtistSearch} />
+          <Route path='/artist_details' component={ArtistResult} />
           <Route path='/screeners' component={Screener} />
           <Route path='/details' component={DetailsPage} />
           <Route path='/test' component={TestPage} />
