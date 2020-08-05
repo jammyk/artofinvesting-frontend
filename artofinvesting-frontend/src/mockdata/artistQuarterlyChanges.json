@@ -1,0 +1,45 @@
+[
+    
+    {
+        "action": "Sell",
+        "ticker": "DAL",
+        "name": "Delta Air Lines, Inc.",
+        "percentChange": 0.005
+    },
+    {
+        "action": "Buy",
+        "ticker": "AMZN",
+        "name": "Amazon.com, Inc.",
+        "percentChange": 0.007
+    },
+    {
+        "action": "Buy",
+        "ticker": "MSFT",
+        "name": "Microsoft Corporation",
+        "percentChange": 0.002
+    },
+    {
+        "action": "Sell",
+        "ticker": "TSLA",
+        "name": "Tesla, Inc.",
+        "percentChange": 0.003
+    },
+    {
+        "action": "Sell",
+        "ticker": "TSLA",
+        "name": "Tesla, Inc.",
+        "percentChange": 0.003
+    },
+    {
+        "action": "Sell",
+        "ticker": "TSLA",
+        "name": "Tesla, Inc.",
+        "percentChange": 0.003
+    },
+    {
+        "action": "Buy",
+        "ticker": "TSLA",
+        "name": "Tesla, Inc.",
+        "percentChange": 0.003
+    }
+]

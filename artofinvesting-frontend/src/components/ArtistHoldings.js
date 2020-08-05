@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table, Pagination } from 'antd';
 
-function sortName(a, b) {
+function sortTicker(a, b) {
     var cmp = a.length > b.length ? b.length : a.length;
     var res = 0;
     for (var i = 0; i < cmp; i++) {
@@ -47,23 +47,23 @@ function sortSource(a, b) {
 const columns = [
     {
       title: 'Stock',
-      dataIndex: 'name',
+      dataIndex: 'ticker',
       // specify the condition of filtering result
-      // here is that finding the name started with `value`
-      //onFilter: (value, record) => record.name.indexOf(value) === 0,
-      sorter: (a, b) => sortName(a.name, b.name),
+      // here is that finding the ticker started with `value`
+      //onFilter: (value, record) => record.ticker.indexOf(value) === 0,
+      sorter: (a, b) => sortTicker(a.ticker, b.ticker),
       //sortDirections: ['descend', 'ascend', 'descend'],
     },
     {
       title: 'Amnt of Shares Held',
-      dataIndex: 'amount',
-      sorter: (a, b) => a.amount - b.amount,
+      dataIndex: 'shares',
+      sorter: (a, b) => a.shares - b.shares,
       sortDirections: ['descend', 'ascend'],
     },
     {
       title: 'Market Val',
-      dataIndex: 'market_val',
-      sorter: (a, b) => a.market_val - b.market_val,
+      dataIndex: 'marketValue',
+      sorter: (a, b) => a.marketValue - b.marketValue,
       sortDirections: ['descend', 'ascend'],
     },
     {
@@ -108,9 +108,9 @@ const columns = [
 const data = [
     {
         key: '1',
-        name: 'APPL',
-        amount: 32,
-        market_val: 1000,
+        ticker: 'APPL',
+        shares: 32,
+        marketValue: 1000,
         portfolio: 10,
         ownership: 0.0005,
         first_quarter: 'Q3 2016',
@@ -120,9 +120,9 @@ const data = [
     },
     {
         key: '2',
-        name: 'TSLA',
-        amount: 42,
-        market_val: 5000,
+        ticker: 'TSLA',
+        shares: 42,
+        marketValue: 5000,
         portfolio: 0.2,
         ownership: 0.5,
         first_quarter: 'Q2 2016',
@@ -132,9 +132,9 @@ const data = [
     },
     {
         key: '3',
-        name: 'FB',
-        amount: 15,
-        market_val: 6000,
+        ticker: 'FB',
+        shares: 15,
+        marketValue: 6000,
         portfolio: 20,
         ownership: 0.0001,
         first_quarter: 'Q1 2018',
@@ -144,9 +144,9 @@ const data = [
     },
     {
         key: '4',
-        name: 'AMZN',
-        amount: 90,
-        market_val: 3000,
+        ticker: 'AMZN',
+        shares: 90,
+        marketValue: 3000,
         portfolio: 0.5,
         ownership: 0.5,
         first_quarter: 'Q4 2012',
