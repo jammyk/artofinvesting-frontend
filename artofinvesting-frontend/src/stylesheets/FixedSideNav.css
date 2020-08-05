@@ -1,0 +1,39 @@
+.side-nav-item-active {
+  border-left: 2px solid #1890ff;
+  transition: border-color 2s ease;
+  background-color: transparent;
+}
+
+.side-nav-item {
+  border-left: 0;
+}
+
+.side-nav-item-icons {
+  font-size: 24px;
+}
+
+.menu-item-padding {
+  padding-bottom: 32px;
+}
+
+.ant-menu-vertical-left, .ant-menu-inline, .ant-menu-vertical {
+  border-right: 0
+}
+
+.ant-menu:not(.ant-menu-horizontal), .ant-menu-item-selected, .ant-menu-vertical {
+  background-color: transparent;
+}
+
+.side-nav-anchor {
+  visibility: hidden;
+}
+
+.ant-tooltip-inner {
+  color: black;
+  background-color: transparent;
+}
+
+.ant-tooltip-arrow {
+  visibility: hidden;
+}
+

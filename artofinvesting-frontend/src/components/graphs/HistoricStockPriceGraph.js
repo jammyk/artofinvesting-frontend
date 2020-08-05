@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ResponsiveContainer, AreaChart, XAxis, YAxis, CartesianAxis, Area } from 'recharts'
 import { Tooltip } from 'antd'
-import { WHITE, BLUE1, DARK_LIVER, ISABELLINE } from '../../constants/colors'
+import { WHITE } from '../../constants/colors'
 
 export default class HistoricStockPriceGraph extends Component {
 

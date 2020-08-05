@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import FixedSideNav from '../navigation/FixedSideNav'
-import { Row, Col, Typography, Card } from 'antd'
+import { Row, Col, Card } from 'antd'
 import FinancialStatement from '../FinancialStatement'
 import NavBar from '../navigation/NavBar'
 import MetricsPanel from '../metrics/MetricsPanel'
@@ -9,13 +9,9 @@ import data from '../../mockdata/metricsData.json';
 import SharesGraph from '../graphs/SharesGraph'
 import shareData from '../../mockdata/sharesOutstanding.json';
 import '../../stylesheets/DetailsPage.css';
-import HistoricStockPriceGraph from '../graphs/HistoricStockPriceGraph'
 import Calculator from '../Calculator'
-import StockPricePanel from '../StockPricePanel'
 import StockPriceTabs from '../StockPriceTabs'
 
-
-const { Title, Text } = Typography;
 
 
 export default class DetailsPage extends Component {
@@ -40,10 +36,15 @@ export default class DetailsPage extends Component {
                         <NavBar />
                     </Col>
                 </Row>
-                <Row className="details-historic-pricing">
-                    <Col span={19} push={3}>
-                        <Card id="title" bordered={false}>
-                            <StockPriceTabs companyName={this.state.companyFullName}/>
+                <Row className="details-historic-pricing" id="historicStockPrice">
+                    <Col span={3}>
+                        <div style={{ paddingLeft: '10%'}}>
+                            <FixedSideNav />
+                        </div>
+                    </Col>
+                    <Col span={19}>
+                        <Card bordered={false}>
+                            <StockPriceTabs companyName={this.state.companyFullName} />
                         </Card>
                     </Col>
                 </Row>
@@ -56,7 +57,7 @@ export default class DetailsPage extends Component {
                     <Col span={19} push={3}>
                         <Card
                             title='Financial Statements'
-                            id='financial-statements'
+                            id='financialStatements'
                             headStyle={{ textAlign: 'left' }}
                             bordered={false}
                         >

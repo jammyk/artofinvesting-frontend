@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { Tabs, Row, Col, Affix, Button, Typography, Menu } from 'antd';
+import { Row, Col, Affix, Typography, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import logo from '../../images/aoi_logo.png';
 import LoginButton from '../LoginButton';
 import '../../stylesheets/NavBar.css';
-const { TabPane } = Tabs;
 const { Text } = Typography;
 
 export default class NavBar extends Component {
@@ -12,7 +11,7 @@ export default class NavBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            class: 'navbar-affix-default'
+            class: 'navbar-affix-default',
         }
     }
 
