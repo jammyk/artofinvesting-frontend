@@ -12,8 +12,8 @@ p {
 
 #name_label {
     font-size: x-large;
-    font-weight: bolder;
-    color: black;
+    /*font-weight: bolder;
+    color: black;*/
     margin-bottom: 1em;
 }
 
