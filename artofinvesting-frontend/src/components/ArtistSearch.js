@@ -7,14 +7,13 @@ import { Select } from 'antd';
 
 
 const { Option } = Select;
-function handleChange(value) {
-    console.log(`selected ${value}`);
-}
-
-
-
 
 class ArtistSearch extends Component {
+
+    handleChange(value) {
+        console.log(`selected ${value}`);
+    }
+
     render() {
         return (
             <div>
@@ -26,7 +25,7 @@ class ArtistSearch extends Component {
                         <CompanySearchBar message="Name of an artist to search"/>
                     </Col>
                     <Col>
-                        <Select defaultValue="13F" style={{ width: 100 }} onChange={handleChange}>
+                        <Select defaultValue="13F" style={{ width: 100 }} onChange={this.handleChange}>
                             <Option value="jack">13F</Option>
                             <Option value="lucy">2</Option>
                             <Option value="disabled">3</Option>

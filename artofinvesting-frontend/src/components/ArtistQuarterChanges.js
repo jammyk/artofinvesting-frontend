@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Row, Col, Card } from 'antd';
-import data from '../mockdata/artistQuarterlyChanges.json';
-import '../stylesheets/ArtistQuarterChanges.css'
+import data from '../mockdata/artistHoldings.json';
+import '../stylesheets/ArtistQuarterChanges.css';
 
-const sells = data.filter(function (el) {
+const recent = data["recentChanges"];
+
+const sells = recent.filter(function (el) {
     return el.action === "Sell";
 });
 
-const buys = data.filter(function (el) {
+const buys = recent.filter(function (el) {
     return el.action === "Buy";
 });
 

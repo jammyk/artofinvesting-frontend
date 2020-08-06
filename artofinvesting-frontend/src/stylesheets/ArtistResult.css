@@ -1,3 +1,30 @@
 p {
     text-align: left;
 }
+
+.card {
+    margin-top: 3%;
+}
+
+.label {
+    float: left;
+}
+
+#name_label {
+    font-size: x-large;
+    font-weight: bolder;
+    color: black;
+    margin-bottom: 1em;
+}
+
+/* #company_label {
+    font-size: large;
+    font-weight: bold;
+    color: black;
+}
+
+#asset_label {
+    font-size: large;
+    font-weight: normal;
+    color: black;
+} */

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Pagination } from 'antd';
+import { Table } from 'antd';
 import data from '../mockdata/artistHoldings.json';
 
 function sortTicker(a, b) {
@@ -44,6 +44,8 @@ function sortSource(a, b) {
     if (a === b) return 0;
     else return 1;
 }
+
+const hold = data["holdings"];
 
 const columns = [
     {
@@ -105,16 +107,14 @@ const columns = [
         sortDirections: ['descend', 'ascend'],
     },
 ];
-  
-  function onChange(pagination, filters, sorter, extra) {
-    console.log('params', pagination, filters, sorter, extra);
-}
-
 
 class ArtistHoldings extends Component {
+    onChange(pagination, filters, sorter, extra) {
+        console.log('params', pagination, filters, sorter, extra);
+    }
     render() {
         return (
-            <Table columns={columns} dataSource={data} onChange={onChange} pagination={{defaultCurrent:1, total:data.length, showSizeChanger:true,
+            <Table columns={columns} dataSource={hold} onChange={this.onChange} pagination={{defaultCurrent:1, total:data.length, showSizeChanger:true,
             showTotal:(total, range) => `${range[0]}-${range[1]} of ${total} items`}}
                 scroll={{x:true}}
             />
