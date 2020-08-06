@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Pagination } from 'antd';
+import data from '../mockdata/artistHoldings.json';
 
 function sortTicker(a, b) {
     var cmp = a.length > b.length ? b.length : a.length;
@@ -81,14 +82,14 @@ const columns = [
     },
     {
         title: '1st Qtr',
-        dataIndex: 'first_quarter',
-        sorter: (a, b) => sortQuarter(a.first_quarter, b.first_quarter),
+        dataIndex: 'firstQuarter',
+        sorter: (a, b) => sortQuarter(a.firstQuarter, b.firstQuarter),
         sortDirections: ['descend', 'ascend'],
     },
     {
         title: 'Estimated Price',
-        dataIndex: 'est_price',
-        sorter: (a, b) => a.est_price - b.est_price,
+        dataIndex: 'estimatedPrice',
+        sorter: (a, b) => a.estimatedPrice - b.estimatedPrice,
         sortDirections: ['descend', 'ascend'],
     },
     {
@@ -99,60 +100,9 @@ const columns = [
     },
     {
         title: 'Source Data',
-        dataIndex: 'source',
-        sorter: (a, b) => sortSource(a.source, b.source),
+        dataIndex: 'sourceData',
+        sorter: (a, b) => sortSource(a.sourceData, b.sourceData),
         sortDirections: ['descend', 'ascend'],
-    },
-];
-  
-const data = [
-    {
-        key: '1',
-        ticker: 'APPL',
-        shares: 32,
-        marketValue: 1000,
-        portfolio: 10,
-        ownership: 0.0005,
-        first_quarter: 'Q3 2016',
-        est_price: 500,
-        reported: '2020-07-02',
-        source: '13F',
-    },
-    {
-        key: '2',
-        ticker: 'TSLA',
-        shares: 42,
-        marketValue: 5000,
-        portfolio: 0.2,
-        ownership: 0.5,
-        first_quarter: 'Q2 2016',
-        est_price: 3400,
-        reported: '2020-07-05',
-        source: '13F',
-    },
-    {
-        key: '3',
-        ticker: 'FB',
-        shares: 15,
-        marketValue: 6000,
-        portfolio: 20,
-        ownership: 0.0001,
-        first_quarter: 'Q1 2018',
-        est_price: 200,
-        reported: '2020-06-30',
-        source: '13F',
-    },
-    {
-        key: '4',
-        ticker: 'AMZN',
-        shares: 90,
-        marketValue: 3000,
-        portfolio: 0.5,
-        ownership: 0.5,
-        first_quarter: 'Q4 2012',
-        est_price: 900,
-        reported: '2020-03-02',
-        source: '13F',
     },
 ];
   
@@ -160,10 +110,12 @@ const data = [
     console.log('params', pagination, filters, sorter, extra);
 }
 
+
 class ArtistHoldings extends Component {
     render() {
         return (
-            <Table columns={columns} dataSource={data} onChange={onChange} pagination={{defaultCurrent:6, total:500}} 
+            <Table columns={columns} dataSource={data} onChange={onChange} pagination={{defaultCurrent:1, total:data.length, showSizeChanger:true,
+            showTotal:(total, range) => `${range[0]}-${range[1]} of ${total} items`}}
                 scroll={{x:true}}
             />
         );
