@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import logo from '../images/aoi_logo.png';
-import { Link } from 'react-router-dom';
-import { Row, Col } from 'antd';
-import { Tabs } from 'antd';
-import { Card } from 'antd';
-import '../stylesheets/ArtistResult.css';
+import { Row, Col, Tabs, Card } from 'antd';
 import ArtistQuarterChanges from './ArtistQuarterChanges';
 import ArtistHoldings from './ArtistHoldings';
+import NavBar from './NavBar';
+import '../stylesheets/ArtistResult.css';
 
 
 const { TabPane } = Tabs;
@@ -20,7 +17,9 @@ class ArtistResult extends Component {
         return (
             <div>
                 <Row>
-                    <Link to="/"><img src={logo} alt="logo" style={{ width: "100px", height: "100px", paddingTop: "1%", paddingLeft: "1%" }} /></Link>
+                    <Col span={24}>
+                        <NavBar />
+                    </Col>
                 </Row>
                 <Row>
                     <Col span={16} style={{paddingTop: "1%"}}>
