@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Anchor, Menu, Affix, Tooltip } from 'antd';
+import { Anchor, Affix, Tooltip } from 'antd';
 import '../../stylesheets/FixedSideNav.css';
 import {
     StockOutlined,
@@ -7,10 +7,21 @@ import {
     FundOutlined,
     PieChartOutlined,
 } from '@ant-design/icons';
+import {
+    stockPriceSectionHREF,
+    financialStatementsSectionHREF,
+    metricsSectionHREF,
+    sharesSectionHREF,
+    financialStatements,
+    metrics,
+    shares,
+    stockPrice,
+    getBaseNameFromSectionHREF,
+    getSectionHREFFromBaseName,
+} from '../../constants/detailsSection';
 
 
 const { Link } = Anchor;
-const { Item } = Menu;
 
 
 export default class FixedSideNav extends Component {
@@ -20,26 +31,11 @@ export default class FixedSideNav extends Component {
         this.state = {
             offSetTop: 0,
             collapsed: true,
-            financialStatements: 'side-nav-item',
-            metrics: 'side-nav-item',
-            shares: 'side-nav-item',
-            historicStockPrice: 'side-nav-item',
-            sideNavClasses: [
-                {
-                    name: 'historicStockPrice'
-                },
-                {
-                    name: 'financialStatements'
-                },
-                {
-                    name: 'metrics'
-                },
-                {
-                    name: 'shares'
-                },
-            ]
-
-
+            currentActiveAnchor: '',
+            [stockPrice]: 'side-nav-item',
+            [financialStatements]: 'side-nav-item',
+            [metrics]: 'side-nav-item',
+            [shares]: 'side-nav-item'
         };
 
         this.updateTopOffset = this.updateTopOffset.bind(this);
@@ -70,93 +66,84 @@ export default class FixedSideNav extends Component {
         window.removeEventListener('resize', this.updateTopOffset);
     }
 
-    onMenuItemClick(e) {
-        let el = document.querySelector("#" + e.key); 
-        el.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
+    onSideNavItemClick(key) {
+        let clickedNavId = key.currentTarget.getAttribute('id');
+        let clickedSectionHref = getSectionHREFFromBaseName(clickedNavId);
+        let el = document.querySelector(clickedSectionHref);
+        if (el) {
+            el.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        } else {
+            console.error('anchor not found');
+        }
     }
 
-    setMenuItemActive(menuItemKey) {
-        for (let menuItems of this.state.sideNavClasses) {
-            if ('#' + menuItems['name'] === menuItemKey) {
-                this.setState({ [menuItems['name']]: 'side-nav-item-active ant-menu-item-active ant-tooltip-open' });
-            } else {
-                this.setState({ [menuItems['name']]: '' });
-            }
+    setSideItemActive(sectionHref) {
+        let baseName = getBaseNameFromSectionHREF(sectionHref);
+        let currentActiveAnchor = this.state.currentActiveAnchor;
+        this.setState({
+            currentActiveAnchor: baseName,
+            [baseName]: 'side-nav-item-container-active',
+            [currentActiveAnchor]: '',
+        });
+        this.focusNavItem(baseName);
+    }
+
+    focusNavItem(navItemID) {
+        console.log('from focus', navItemID);
+        let el = document.getElementById(navItemID);
+        if (el) {
+            el.focus();
+            console.log(el.focus());
+            console.log('focused nav item', el);
         }
     }
 
     anchorChange(currentActiveLink) {
-        this.setMenuItemActive(currentActiveLink);
+        this.setSideItemActive(currentActiveLink);
     }
 
     render() {
         return (
-            <div > 
-
+            <div >
                 <Affix
-                    offsetTop={250}
-
                 >
-                    <Menu
-                        mode='inline'
-                        inlineCollapsed={this.state.collapsed}
-                        onClick={this.onMenuItemClick}
-                        onSelect={this.onMenuItemSelect}
-                        selectable={false}
-                    >
-                        <Item
-                            key="historicStockPrice"
-                            icon={<StockOutlined style={{ fontSize: '24px' }} />}
-                            className={this.state.historicStockPrice}
-                            style={{ backgroundColor: 'transparent' }}
-                        >
-                            <Tooltip title='Historic Stock Prices' color={'purple'} />
-                            Historic Stock Prices
-                        </Item>
-                        <div className='menu-item-padding' />
-                        <Item
-                            key="financialStatements"
-                            icon={<BarChartOutlined style={{ fontSize: '24px' }} />}
-                            className={this.state.financialStatements}
-                            style={{ backgroundColor: 'transparent' }}
-                        >
-                            Financial Statements
-                        </Item>
-                        <div className='menu-item-padding' />
-                        <Item
-                            key="metrics"
-                            icon={<FundOutlined style={{ fontSize: '24px' }} />}
-                            className={this.state.metrics}
-                            style={{ backgroundColor: 'transparent' }}
-                        >
-                            Metrics
-                        </Item>
-                        <div className='menu-item-padding' />
-                        <Item
-                            key="shares"
-                            icon={<PieChartOutlined style={{ fontSize: '24px' }} />}
-                            className={this.state.shares}
-                            style={{ backgroundColor: 'transparent' }}
-                        >
-                            Shares Outstanding
-                        </Item>
-                    </Menu>
+                    <div className='side-nav-container'>
+                        <Tooltip className='side-nav-item-description' title='Historic Stock Price' placement='right' trigger={['hover']} >
+                            <div className={'side-nav-item-container ' + this.state.historicStockPrice} id={stockPrice} onClick={this.onSideNavItemClick}>
+                                <StockOutlined className='side-nav-icons' />
+                            </div>
+                        </Tooltip>
+                        <Tooltip className='side-nav-item-description' title='Financial Statements' placement='right' trigger={['hover', 'focus']}>
+                            <div className={'side-nav-item-container ' + this.state.financialStatements} id={financialStatements} onClick={this.onSideNavItemClick}>
+                                <BarChartOutlined className='side-nav-icons' />
+                            </div>
+                        </Tooltip>
+                        <Tooltip className='side-nav-item-description' title='Metrics' placement='right' trigger={['hover', 'focus']}>
+                            <div className={'side-nav-item-container ' + this.state.metrics} id={metrics} onClick={this.onSideNavItemClick}>
+                                <FundOutlined className='side-nav-icons' />
+                            </div>
+                        </Tooltip>
+                        <Tooltip className='side-nav-item-description' title='Share Outstanding' placement='right' trigger={['hover', 'focus']}>
+                            <div className={'side-nav-item-container ' + this.state.shares} id={shares} onClick={this.onSideNavItemClick}>
+                                <PieChartOutlined className='side-nav-icons' />
+                            </div>
+                        </Tooltip>
+                    </div>
                 </Affix>
                 <Anchor
                     className="fixed-side-nav_anchor"
                     onClick={this.handleClick}
                     offsetTop={this.state.offSetTop}
                     bounds={2}
-                    className='side-nav-anchor'
                     onChange={this.anchorChange}
                 >
-                    <Link href="#historicStockPrice" />
-                    <Link href="#financialStatements" />
-                    <Link href="#metrics" />
-                    <Link href="#shares" />
+                    <Link href={stockPriceSectionHREF} />
+                    <Link href={financialStatementsSectionHREF} />
+                    <Link href={metricsSectionHREF} />
+                    <Link href={sharesSectionHREF} />
                 </Anchor>
             </div>
         )

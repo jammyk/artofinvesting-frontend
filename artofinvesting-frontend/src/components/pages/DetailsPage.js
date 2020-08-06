@@ -11,7 +11,7 @@ import shareData from '../../mockdata/sharesOutstanding.json';
 import '../../stylesheets/DetailsPage.css';
 import Calculator from '../Calculator'
 import StockPriceTabs from '../StockPriceTabs'
-
+import { stockPriceSection, financialStatementsSection, metricsSection, sharesSection } from '../../constants/detailsSection'
 
 
 export default class DetailsPage extends Component {
@@ -28,6 +28,8 @@ export default class DetailsPage extends Component {
         // todo axios call
     }
 
+
+
     render() {
         return (
             <div>
@@ -36,10 +38,15 @@ export default class DetailsPage extends Component {
                         <NavBar />
                     </Col>
                 </Row>
-                <Row className="details-historic-pricing" id="historicStockPrice">
+                <Row className="details-historic-pricing" id={stockPriceSection}>
                     <Col span={3}>
                         <div style={{ paddingLeft: '10%'}}>
-                            <FixedSideNav />
+                            <FixedSideNav 
+                            historicStockPriceSectionID={stockPriceSection}
+                            financialStatementsSectionID={financialStatementsSection}
+                            metricsSectionID={metricsSection}
+                            sharesOutstandingSectionID={sharesSection}
+                            />
                         </div>
                     </Col>
                     <Col span={19}>
@@ -57,7 +64,7 @@ export default class DetailsPage extends Component {
                     <Col span={19} push={3}>
                         <Card
                             title='Financial Statements'
-                            id='financialStatements'
+                            id={financialStatementsSection}
                             headStyle={{ textAlign: 'left' }}
                             bordered={false}
                         >
@@ -72,7 +79,7 @@ export default class DetailsPage extends Component {
                     <Col span={19} push={3}>
                         <Card
                             title='Metrics'
-                            id='metrics'
+                            id={metricsSection}
                             headStyle={{ textAlign: 'left' }}
                             bodyStyle={{ justifyContent: 'center' }}
                             bordered={false}
@@ -89,7 +96,7 @@ export default class DetailsPage extends Component {
                     <Col span={19} push={3}>
                         <Card
                             title='Shares Outstanding'
-                            id='shares'
+                            id={sharesSection}
                             headStyle={{ textAlign: 'left' }}
                             bordered={false}
                         >
