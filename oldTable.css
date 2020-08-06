@@ -1,0 +1,104 @@
+
+.rtable {
+    /*!
+    // IE needs inline-block to position scrolling shadows otherwise use:
+    // display: block;
+    // max-width: min-content;
+    */
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 80%;
+    
+    overflow-x: auto;
+    
+    white-space: nowrap;
+  
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    empty-cells: hide;
+  }
+  
+  .rtable--flip tbody tr:nth-child(even) {
+    background:  rgb(196, 193, 193);
+    background-repeat: repeat-y;
+    background-position: 100% 0;
+  }
+  
+  .rtable th {
+    font-size: 1em;
+    font-family: "Trebuchet MS";
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background:linear-gradient(to right, rgb(128, 221, 245) 10%, rgb(250, 248, 248) 100%);
+  }
+  
+  .rtable th,
+  .rtable td {
+    padding: 6px 12px;
+    align-content: center !important;
+    font-size: 1em;
+    border: 0.5px solid #cfced9;
+    border-collapse: collapse;
+  }
+
+  .rtable--flip {
+    display: flex;
+  }
+  
+  .rtable--flip thead {
+    font-size: 13px;
+    display: flex;
+    flex-shrink: 0;
+    min-width: min-content;
+  }
+  
+  .rtable--flip tbody {
+    display: flex;  
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .rtable--flip td,
+  .rtable--flip th {
+    display: block;
+    height: 35.6px;
+    text-justify: center;
+  }
+  
+  .year {
+    border: 1px solid #cfced9 !important;
+    font-weight: bold;
+  } 
+
+  .emptyCell {
+      height: 35.6px;
+      border: 0px !important;
+      background: none !important;
+  }
+
+  .parent ~ .child{
+      width: 80%;
+      text-align: right !important;
+      align-content: flex-end !important;
+      margin-left: 20% !important;
+  }
+
+  .parent table{
+    margin-right: 0px !important;
+  }
+
+  .parentRow {
+    font-size: 0px !important;
+    border: 0px !important;
+  }
+
+  .anticon.anticon-right{
+    font-size: 13px !important;
+}
+
+  .expandBtn{
+      margin-left: 5px;
+  }
