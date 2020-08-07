@@ -1,0 +1,704 @@
+
+    {
+        "incomeStatement": [
+            {
+                "key": "totalRevenue",
+                "field": "Total Revenue",
+                "2017": "89950000",
+                "2018": 11036000,
+                "2019": 125843000
+            },
+            {
+                "key": "costOfRevenue",
+                "field": "Cost of Revenue",
+                "2017": 34261000,
+                "2018": 38353000,
+                "2019": 42910000
+            },
+            {
+                "key": "grossProfit",
+                "field": "Gross Profit",
+                "2017": 55689000,
+                "2018": 72007000,
+                "2019": 82933000
+            },
+            {
+                "key": "operatingExpenses",
+                "field": "Operating Expenses",
+                "2017": 33057000,
+                "2018": 36949000,
+                "2019": 39974000,
+                "children":[
+                    {
+                        "key": "researchAndDevelopment",
+                        "field": "Research & Development",
+                        "2017": 13037000,
+                        "2018": 14726000,
+                        "2019": 16876000
+                    },
+                    {
+                        "key": "sellingGeneralAndAdmin",
+                        "field": "Selling General and Admin",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "totalOperatingExpense",
+                        "field": "Total Operating Expenses",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    }
+
+                ]
+            },
+            {
+                "key": "operatingIncomeOrLoss",
+                "field": "Operating Income or Loss",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "totalNetOtherIncomeAndExpense",
+                "field": "Total Net Other Income/Expenses",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "interestExpense",
+                "field": "Interest Expense",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "incomeBeforeTax",
+                "field": "Income Before Tax",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "incomeTaxExpense",
+                "field": "Income Tax Expense",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "incomeFromContinuingOperations",
+                "field": "Income from Continuing Operatiosn",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "netIncome",
+                "field": "Net Income",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "netIncomeAvailableToCommonShareholders",
+                "field": "Net Income Available to Common Shareholders",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {   
+                "key": "basicEPS",
+                "field": "Basic EPS",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "dilutedEPS",
+                "field": "Diluted EPS",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "basicAvgShares",
+                "field": "Basic Average Shares",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "dilutedAvgShares",
+                "field": "Diluted Average Shares",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "EBITDA",
+                "field": "EBITDA",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            }
+        ],
+        "balanceSheet": [
+            {
+                "key": "assets",
+                "field": "Assets",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333,
+                "children": [
+                    {
+                        "key": "currentAssets",
+                        "field": "Current Assets",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333,
+                        "children":[
+                            {
+                                "key": "cash",
+                                "field": "Cash",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333,
+                                "children":[
+                                    {
+                                        "key": "cashAndCashEquivalents",
+                                        "field": "Cash & Cash Equivalents",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "otherShortTermInvestments",
+                                        "field": "Other Short Term Investments",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },{
+                                        "key": "totalCash",
+                                        "field": "Total Cash",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "netReceivables",
+                                "field": "Net Receivables",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333
+                            },
+                            {
+                                "key": "inventory",
+                                "field": "Inventory",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333
+                            },
+                            {
+                                "key": "otherCurrentAssets",
+                                "field": "Other Current Assets",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333
+                            },
+                            {
+                                "key": "totalCurrentAssets",
+                                "field": "Total Current Assets",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333
+                            }
+                        ]
+                    },
+                    {
+                        "key": "nonCurrentAssets",
+                        "field": "Non-current Assets",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333,
+                        "children":[
+                            {
+                                "key": "propertyPlantAndEquipment",
+                                "field": "Property, Plant and Equipment",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333,
+                                "children": [
+                                    {
+                                        "key": "grossPropertyPlantAndEquipment",
+                                        "field": "Gross Property, Plant and Equipment",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "accumulatedDepreciation",
+                                        "field": "Accumulated Depreciation",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "netPropertyPlantAndEquipment",
+                                        "field": "Net Property, Plant and Equipment",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "equityAndOtherInvestments",
+                                "field": "Equity and Other Investments",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333
+                            },
+                            {
+                                "key": "goodwill",
+                                "field": "Goodwill",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333
+                            },
+                            {
+                                "key": "intangibleAssets",
+                                "field": "Intangible Assets",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333
+                            },
+                            {
+                                "key": "otherLongTermAssets",
+                                "field": "Other Long-term Assets",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333
+                            },
+                            {
+                                "key": "totalNonCurrentAssets",
+                                "field": "Total Non-current Assets",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333
+                            }
+                        ]
+                    },
+                    {
+                        "key": "totalAssets",
+                        "field": "Total Assets",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    }
+                ]
+            },
+            {
+                "key": "liabilitiesAndStockholdersEquity",
+                "field": "Liabilities and Stockholders Equity",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333,
+                "children":[
+                    {
+                        "key": "liabilities",
+                        "field": "Liabilities",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333,
+                        "children":[
+                            {
+                                "key": "currentLiabilities",
+                                "field": "Current Liabilities",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333,
+                                "children":[
+                                    {
+                                        "key": "currentDebt",
+                                        "field": "Current Debt",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "accountsPayable",
+                                        "field": "Accounts Payable",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "taxesPayable",
+                                        "field": "Taxes Payable",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "deferredRevenues",
+                                        "field": "Deferred Revenues",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "otherCurrentLiabilities",
+                                        "field": "Other Current Liabilities",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "totalCurrentLiabilities",
+                                        "field": "Total Current Liabilities",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "nonCurrentLiabilities",
+                                "field": "Non-current Liabilities",
+                                "2017": 11111111,
+                                "2018": 22222222,
+                                "2019": 33333333,
+                                "children":[
+                                    {
+                                        "key": "longTermDebt",
+                                        "field": "Long-term Debt",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "deferredTaxesLiabilities",
+                                        "field": "Deferred Taxes Liabilities",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "deferredRevenues",
+                                        "field": "Deferred Revenues",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "otherLongTermLiabilities",
+                                        "field": "Other Long-term Liabilities",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    },
+                                    {
+                                        "key": "totalNonCurrentLiabilities",
+                                        "field": "Total Non-current Liabilities",
+                                        "2017": 11111111,
+                                        "2018": 22222222,
+                                        "2019": 33333333
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "key": "totalLiabilities",
+                        "field": "Total Liabilities",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    }
+                ]
+            },
+            {
+                "key": "stockholdersEquity",
+                "field": "Stockholders Equity",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333,
+                "children":[
+                    {
+                        "key": "commonStock",
+                        "field": "Common Stock",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "retainedEarnings",
+                        "field": "Retained Earnings",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "accumulatedOtherComprehensiveIncome",
+                        "field": "Accumulated Other Comprehensive Income",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "totalStockholdersEquity",
+                        "field": "Total Stockholders Equity",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    }
+                ]
+            },
+            {
+                "key": "totalLiabilitiesAndStockholdersEquity",
+                "field": "Total Liabilities and Stockholders Equity",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            }
+        ],
+        "cashFlow":[
+            {
+                "key": "cashFromOperation",
+                "field": "Cash from Operations",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333,
+                "children":[
+                    {
+                        "key": "netIncome",
+                        "field": "Net Income",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "depreciationAndAmortization",
+                        "field": "Depreciation & Amortization",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "deferredIncomeTaxes",
+                        "field": "Deferred Income Taxes",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "stockBasedCompensation",
+                        "field": "Stock Based Compensation",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "changeInWorkingCapital",
+                        "field": "Change in Working Capital",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "accountsReceivable",
+                        "field": "Accounts Receivable",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "inventory",
+                        "field": "Inventory",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "accountsPayable",
+                        "field": "Accounts Payable",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "otherOperations",
+                        "field": "Other Operations",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "netCashFromOperations",
+                        "field": "Net Cash from Operations",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    }
+                ]
+            },
+            {
+                "key": "cashFromInvesting",
+                "field": "Cash from Investing",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333,
+                "children":[
+                    {
+                        "key": "ppe",
+                        "field": "Investments in Property, Plant and Equipment",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "netAcquisitions",
+                        "field": "Net Acquisitions",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "purchaseOfInvestments",
+                        "field": "Purchase of Investments",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "disposalOfInvestments",
+                        "field": "Disposal of Investments",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "otherInvesting",
+                        "field": "Other Investings",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "netCashFromInvesting",
+                        "field": "Net Cash from Investing",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    }
+                ]
+            },
+            {
+                "key": "cashFromFinancing",
+                "field": "Cash from Financing",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333,
+                "children":[
+                    {
+                        "key": "debtRepayment",
+                        "field": "Debt Repayment",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "commonStockIssuance",
+                        "field": "Common Stock Issued",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "commonStockRepurchase",
+                        "field": "Common Stock Repurchased",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "dividendsPaid",
+                        "field": "Dividends Paid",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "otherFinancing",
+                        "field": "Other Financing",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "netCashFromFinancing",
+                        "field": "Net Cash from Financing",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    }
+                ]
+            },
+            {
+                "key": "netChangeInCash",
+                "field": "Net Change in Cash",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "cashAtBeginning",
+                "field": "Cash at Beginning",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "cashAtEnd",
+                "field": "Cash at End",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333
+            },
+            {
+                "key": "freeCashFlow",
+                "field": "Free Cash Flow",
+                "2017": 11111111,
+                "2018": 22222222,
+                "2019": 33333333,
+                "children":[
+                    {
+                        "key": "operatingCashFlow",
+                        "field": "Operating Cash Flow",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "capEx",
+                        "field": "Capital Expenditure",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    },
+                    {
+                        "key": "totalFreeCashFlow",
+                        "field": "Total Free Cash Flow",
+                        "2017": 11111111,
+                        "2018": 22222222,
+                        "2019": 33333333
+                    }
+                ]
+            }
+        ]
+    }

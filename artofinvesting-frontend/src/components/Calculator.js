@@ -83,7 +83,6 @@ class Calculator extends Component {
         this.setState({
             growthInputs: updatedGrowthArry
         })
-        console.log(this.state.growthInputs)
         this.checkCorrectInput()
     }
 
@@ -96,7 +95,6 @@ class Calculator extends Component {
         this.setState({
             yrInputs: updatedYearsArry
         })
-        console.log(this.state.yrInputs)
 
         this.checkCorrectInput()
     }
@@ -138,7 +136,6 @@ class Calculator extends Component {
             wrongInputs: false
         })
         this.renderChartData()
-        console.log(this.state.wrongInputs)
     }
 
 
@@ -173,7 +170,6 @@ class Calculator extends Component {
                 })
             }
         }
-        console.log(data)
         this.setState({
             chartData: data
         })
@@ -186,7 +182,6 @@ class Calculator extends Component {
         for (var i=1; i < data.length; i++){
             var fcf = data[i].cashFlow/((1+(discountRate*0.01))**i)
             result += fcf
-            console.log("this is " + i + "fcf: " + fcf)
         }
         return Math.round(result)   
     }

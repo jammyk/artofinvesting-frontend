@@ -11,7 +11,7 @@ export default class ValuationMetricCard extends Component {
         <Card 
         title={this.props.isTabs ? '' : <div><SmileOutlined /> Valuation Metrics</div>} 
         bordered={false}>
-          <table>
+          <table className="flippedTable">
             <tbody>
               <tr>
                 <th>Price to Earnings</th>

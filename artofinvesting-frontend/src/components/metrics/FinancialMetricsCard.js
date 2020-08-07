@@ -12,7 +12,7 @@ export default class FinancialMetricsCard extends Component {
                 title={this.props.isTabs ? '' : <div><NumberOutlined /> Financial Metrics</div>} 
                 bordered={false}
                 >
-                    <table>
+                    <table className="flippedTable">
                         <tbody>
                             <tr>
                                 <th>Cash per Share</th>
