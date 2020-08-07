@@ -49,7 +49,7 @@ export default class FixedSideNav extends Component {
 
     computeOffSetTop() {
         let currentWindowHeight = window.innerHeight;
-        return (currentWindowHeight - 100) / 2;
+        return (currentWindowHeight - 200) / 2;
     }
 
     updateTopOffset() {
@@ -88,17 +88,6 @@ export default class FixedSideNav extends Component {
             [baseName]: 'side-nav-item-container-active',
             [currentActiveAnchor]: '',
         });
-        this.focusNavItem(baseName);
-    }
-
-    focusNavItem(navItemID) {
-        console.log('from focus', navItemID);
-        let el = document.getElementById(navItemID);
-        if (el) {
-            el.focus();
-            console.log(el.focus());
-            console.log('focused nav item', el);
-        }
     }
 
     anchorChange(currentActiveLink) {
@@ -109,6 +98,7 @@ export default class FixedSideNav extends Component {
         return (
             <div >
                 <Affix
+                    offsetTop={this.state.offSetTop}
                 >
                     <div className='side-nav-container'>
                         <Tooltip className='side-nav-item-description' title='Historic Stock Price' placement='right' trigger={['hover']} >
@@ -134,10 +124,10 @@ export default class FixedSideNav extends Component {
                     </div>
                 </Affix>
                 <Anchor
-                    className="fixed-side-nav_anchor"
+                    offsetTop={1000} // not sure why this works.. but it does?
                     onClick={this.handleClick}
-                    offsetTop={this.state.offSetTop}
                     bounds={2}
+                    className='side-nav-anchor'
                     onChange={this.anchorChange}
                 >
                     <Link href={stockPriceSectionHREF} />

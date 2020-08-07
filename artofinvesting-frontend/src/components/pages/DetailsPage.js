@@ -12,6 +12,7 @@ import '../../stylesheets/DetailsPage.css';
 import Calculator from '../Calculator'
 import StockPriceTabs from '../StockPriceTabs'
 import { stockPriceSection, financialStatementsSection, metricsSection, sharesSection } from '../../constants/detailsSection'
+import SectionTitle from '../SectionTitle'
 
 
 export default class DetailsPage extends Component {
@@ -38,19 +39,19 @@ export default class DetailsPage extends Component {
                         <NavBar />
                     </Col>
                 </Row>
-                <Row className="details-historic-pricing" id={stockPriceSection}>
+                <Row >
                     <Col span={3}>
-                        <div style={{ paddingLeft: '10%'}}>
-                            <FixedSideNav 
-                            historicStockPriceSectionID={stockPriceSection}
-                            financialStatementsSectionID={financialStatementsSection}
-                            metricsSectionID={metricsSection}
-                            sharesOutstandingSectionID={sharesSection}
+                        <div style={{ paddingLeft: '10%' }}>
+                            <FixedSideNav
+                                historicStockPriceSectionID={stockPriceSection}
+                                financialStatementsSectionID={financialStatementsSection}
+                                metricsSectionID={metricsSection}
+                                sharesOutstandingSectionID={sharesSection}
                             />
                         </div>
                     </Col>
                     <Col span={19}>
-                        <Card bordered={false}>
+                        <Card bordered={false} id={stockPriceSection} className="details-section-container">
                             <StockPriceTabs companyName={this.state.companyFullName} />
                         </Card>
                     </Col>
@@ -63,11 +64,11 @@ export default class DetailsPage extends Component {
                 <Row>
                     <Col span={19} push={3}>
                         <Card
-                            title='Financial Statements'
-                            id={financialStatementsSection}
-                            headStyle={{ textAlign: 'left' }}
                             bordered={false}
+                            id={financialStatementsSection}
+                            className="details-section-container"
                         >
+                            <SectionTitle title='Financial Statements' lastUpdated='Aug 6, 2020' />
                             <FinancialStatement />
                         </Card>
                     </Col>
@@ -75,15 +76,15 @@ export default class DetailsPage extends Component {
                 <Row>
                     <Col span={24}><div className="parallax metrics-separator" /></Col>
                 </Row>
-                <Row>
+                <Row >
                     <Col span={19} push={3}>
                         <Card
-                            title='Metrics'
-                            id={metricsSection}
-                            headStyle={{ textAlign: 'left' }}
                             bodyStyle={{ justifyContent: 'center' }}
                             bordered={false}
+                            id={metricsSection}
+                            className="details-section-container"
                         >
+                            <SectionTitle title='Various Metrics' lastUpdated='Aug 6, 2020' />
                             <MetricsPanel />
                             <MetricGraph xAxis='year' data={data} lineOne={'returnOnAssets'} lineTwo={'returnOnEquity'} lineThree={'returnOnInvestedCapital'} />
                         </Card>
@@ -95,16 +96,19 @@ export default class DetailsPage extends Component {
                 <Row>
                     <Col span={19} push={3}>
                         <Card
-                            title='Shares Outstanding'
-                            id={sharesSection}
-                            headStyle={{ textAlign: 'left' }}
                             bordered={false}
+                            id={sharesSection}
+                            className="details-section-container"
                         >
+                            <SectionTitle title='Shares Outstanding' lastUpdated='Aug 6, 2020' />
                             <SharesGraph xAxis='year' data={shareData} barKey="sharesOutStnding" />
                         </Card>
                     </Col>
                 </Row>
                 <Calculator />
+                <Row>
+                    <Col span={24}><div className="parallax metrics-separator" /></Col>
+                </Row>
             </div >
         )
     }

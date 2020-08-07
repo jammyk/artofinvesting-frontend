@@ -1,7 +1,3 @@
-.microsoft-header {
-    background-image: url('../images/microsoft_example_photo.jpg');
-}
-
 .parallax {
      /* The image used */
 
@@ -14,6 +10,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.details-section-container {
+    scroll-margin-top: 85px;
+}
+
+.details-section-title {
+    display: block;
+    padding-top: 10%;
+    font-size: 64px;
+    text-align: left;
 }
 
 .header {
@@ -30,4 +37,8 @@
 
 .share-separator {
     background-image: url('../images/example_picture3.jpg');
+}
+
+.ant-tabs-top > .ant-tabs-nav::before {
+    border-bottom: 0;
 }

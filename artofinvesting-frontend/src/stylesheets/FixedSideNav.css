@@ -62,7 +62,7 @@
 }
 
 .side-nav-anchor {
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .ant-tooltip-inner {
