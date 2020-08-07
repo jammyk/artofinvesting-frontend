@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import { Card } from 'antd'
-import '../stylesheets/FlippedAxisTable.css';
+import '../../stylesheets/FlippedAxisTable.css';
+import { SmileOutlined } from '@ant-design/icons';
+
 
 export default class ValuationMetricCard extends Component {
   render() {
     return (
       <div>
-        <Card title={this.props.isTabs ? '' : 'Valuation Metrics'} bordered={false}>
+        <Card 
+        title={this.props.isTabs ? '' : <div><SmileOutlined /> Valuation Metrics</div>} 
+        bordered={false}>
           <table>
             <tbody>
               <tr>

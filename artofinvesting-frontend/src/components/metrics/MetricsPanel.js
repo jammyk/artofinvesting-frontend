@@ -84,9 +84,9 @@ export default class MetricsPanel extends Component {
                     </Row>
                     :
                     <Row>
-                        <Col>{this.getFinancialMetricsCard()}</Col>
-                        <Col>{this.getOperationalMetricsCard()}</Col>
-                        <Col>{this.getValuationMetricsCard()}</Col>
+                        <Col span={8}>{this.getFinancialMetricsCard()}</Col>
+                        <Col span={8}>{this.getOperationalMetricsCard()}</Col>
+                        <Col span={8}>{this.getValuationMetricsCard()}</Col>
                     </Row>
                 }
             </div>

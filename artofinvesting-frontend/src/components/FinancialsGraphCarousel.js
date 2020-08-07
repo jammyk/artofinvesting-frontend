@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Carousel, Row, Col, Typography } from 'antd'
-import ComposedGraph from './ComposedGraph'
+import ComposedGraph from './graphs/ComposedGraph'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import '../stylesheets/GraphCarousel.css';
 
