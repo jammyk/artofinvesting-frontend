@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import HomePage from './components/HomePage';
+import HomePage from './components/pages/HomePage';
 import Screener from './components/Screener'
-import FinancialStatement from './components/FinancialStatement'
 import { Switch, Route } from 'react-router-dom';
-import DetailsPage from './components/DetailsPage';
+import DetailsPage from './components/pages/DetailsPage';
 import TestPage from './TestPage';
 import LoginModal from './components/authentication/LoginModal';
 import Registration from './components/Registration';
@@ -33,6 +32,7 @@ export default class App extends Component {
           <Route path='/screeners' component={Screener} />
           <Route path='/details' component={DetailsPage} />
           <Route path='/test' component={TestPage} />
+          <Route path='/details' component={DetailsPage} />
           <Route path='/register' component={Registration} />
           <Route path='/forgotpass' component={UserRecoverPassword} />
           <Authenticated>

@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import data from '../mockdata/financialStatement.json'
+import React from 'react'
+import data from '../../mockdata/financialStatement.json'
 
 const { default: FinancialStatementTable } = require("./FinancialStatementTable")
 const cashFlow = data["cashFlowStatements"]

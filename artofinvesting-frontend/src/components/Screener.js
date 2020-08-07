@@ -49,8 +49,10 @@ class Screener extends Component {
         const selected = s.currentTarget.value
         this.toggleHighlight(selected)
         if (this.state.selected !== selected) {
-            this.state.selected = selected
-        } else { this.state.selected = "none" }
+            this.setState({'selected': selected});
+        } else { 
+            this.setState({'selected': 'none'});
+        }
         this.toggleNextButton()
         this.toggleDoneButton()
         console.log(this.state.selected)
@@ -76,7 +78,8 @@ class Screener extends Component {
                 message.error("Please input correct Minimum Market Cap")
             }
             else if (typeof this.state.marketCap === 'string') {
-                this.state.marketCap = parseFloat(this.state.marketCap)
+                let marketCapFloat = parseFloat(this.state.marketCap);
+                this.setState({'marketCap': marketCapFloat});
                 message.success('Processing complete!')
             }
 

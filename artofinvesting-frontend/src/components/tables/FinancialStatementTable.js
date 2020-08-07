@@ -56,12 +56,12 @@ class FinancialStatementTable extends Component {
 
     toggleRowDisplay(targetChildElement) {
         if (!targetChildElement.length) {
-            if (targetChildElement.style.display == "none") {
+            if (targetChildElement.style.display === "none") {
                 targetChildElement.style.display = "block"
             } else targetChildElement.style.display = "none"
         }
         for (var i = 0; i < targetChildElement.length; i++) {
-            if (targetChildElement[i].style.display == "none") {
+            if (targetChildElement[i].style.display === "none") {
                 targetChildElement[i].style.display = "block"
             } else targetChildElement[i].style.display = "none"
         }
@@ -76,7 +76,7 @@ class FinancialStatementTable extends Component {
     toggleExpandBtn(event) {
         var expandBtn = event.currentTarget.children[0],
             collapseBtn = event.currentTarget.children[1]
-        if (expandBtn.style.display == "none") {
+        if (expandBtn.style.display === "none") {
             expandBtn.style.display = "block"
             collapseBtn.style.display = "none"
         } else {
