@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
 import { Table, Tooltip } from 'antd'
 import 'antd/dist/antd.css'
-import '../stylesheets/Table.css'
+import '../../stylesheets/Table.css'
 
 class DetailsTable extends Component {
     
+    constructor(prop) {
+        super(prop);
+        this.state = {
+            columns: []
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            columns: this.renderColumns(this.props.columns)
+        })
+    }
+
     renderColumns(columns) {
+        const bigNumRegex = /\B(?=(\d{3})+(?!\d))/g
         for(var i=0 ; i<columns.length; i++){
             if(i === 0){
                 columns[i].render = value => (
@@ -14,23 +28,22 @@ class DetailsTable extends Component {
                     </Tooltip>
                   )
             }else{
-                columns[i].render = value => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                columns[i].render = value => value.toString().replace(bigNumRegex, ',')
             }
         }
-        console.log(columns)
         return columns
     }
 
 
     render() {
-        const pageSize =40
+        const pageSize = this.props.data.length
         return (
             <Table
                 className="detailsTable"
-                columns={this.renderColumns(this.props.columns)}
+                columns={this.state.columns}
                 dataSource={this.props.data}
                 bordered
-                pagination={this.props.data.length > pageSize && { pageSize }}
+                pagination={false && { pageSize }}
             />
         )
     }

@@ -55,7 +55,6 @@ class Screener extends Component {
         }
         this.toggleNextButton()
         this.toggleDoneButton()
-        console.log(this.state.selected)
     }
 
     selectNumStocks = n => {
@@ -82,8 +81,6 @@ class Screener extends Component {
                 this.setState({'marketCap': marketCapFloat});
                 message.success('Processing complete!')
             }
-
-            console.log(this.state)
         }
     }
 

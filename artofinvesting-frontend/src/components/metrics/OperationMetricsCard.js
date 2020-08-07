@@ -11,7 +11,7 @@ export default class OperationMetricsCard extends Component {
                 title={this.props.isTabs ? '' : <div><DashboardOutlined /> Operational Metrics</div>} 
                 bordered={false}
                 >
-                    <table>
+                    <table className="flippedTable">
                         <tbody>
                             <tr>
                                 <th>Return on Invested Capital</th>
