@@ -126,7 +126,7 @@ export default class FixedSideNav extends Component {
                 <Anchor
                     offsetTop={1000} // not sure why this works.. but it does?
                     onClick={this.handleClick}
-                    bounds={2}
+                    bounds={5}
                     className='side-nav-anchor'
                     onChange={this.anchorChange}
                 >
