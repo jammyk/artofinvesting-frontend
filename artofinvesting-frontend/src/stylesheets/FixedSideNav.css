@@ -1,0 +1,84 @@
+.side-nav-item-active {
+  border-left: 2px solid #1890ff;
+  transition: border-color 2s ease;
+  background-color: transparent;
+}
+
+@keyframes side-nav-item-activate {
+  from { border-left: 0; }
+  to { border-left: 2px solid #1890ff; }
+}
+
+.side-nav-item {
+  border-left: 0;
+}
+
+.side-nav-icons {
+  font-size: 24px;
+  position: absolute;
+  margin-top: 4px;
+}
+
+
+.side-nav-container {
+  width: 150px;
+  padding-left: 5%;
+}
+
+.side-nav-item-container {
+  display: block;
+  align-items: center;
+  height: 32px;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.side-nav-item-container-active {
+  border-left: 1.5px solid #1890ff;
+  color: #1890ff;
+  transform: scale(1.1, 1.1);
+}
+
+
+.side-nav-item-container:hover {
+  color: #1890ff;
+  transform: scale(1.1, 1.1);
+}
+
+.side-nav-item-container:active {
+  color: #1890ff;
+}
+
+.menu-item-padding {
+  padding-bottom: 32px;
+}
+
+.ant-menu-vertical-left, .ant-menu-inline, .ant-menu-vertical {
+  border-right: 0
+}
+
+.ant-menu:not(.ant-menu-horizontal), .ant-menu-item-selected, .ant-menu-vertical {
+  background-color: transparent;
+}
+
+.side-nav-anchor {
+  visibility: hidden;
+}
+
+.ant-tooltip-inner {
+  color: black;
+  background-color: white;
+}
+
+.ant-tooltip-arrow {
+  visibility: hidden;
+}
+
+.ant-popover-arrow {
+  display: none !important;
+}
+
+.ant-popover-inner {
+  background-color: transparent;
+}
+

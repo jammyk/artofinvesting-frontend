@@ -4,48 +4,52 @@ import { getUser, isAuthenticated, redirectToLogin } from '../../helpers/authent
 
 class Authenticated extends Component {
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            user: undefined
-        };
+    this.state = {
+      user: undefined
+    };
+  }
+
+
+  componentDidMount() {
+    getUser(this);
+    if (isAuthenticated()) {
+      this.setState({ user: { loggedIn: true } });
+    } else {
+      redirectToLogin(this);
     }
 
+    // const jwt = getJwt();
+    // console.log(jwt);
+    // if (!jwt) {
+    //     this.props.history.push({pathname: '/login', state: {isModalVisible: true}});
+    // } else {
+    //     console.log('Logged in');
+    //     this.setState({user: {loggedIn: true}})
+    //     // axios.get('/getUser/', { headers: { 
+    //     //     Authorization: 'Bearer ${jwt}'
+    //     // }}).then(res => { 
+    //     //     this.setState({
+    //     //         user: res.data
+    //     //     });
+    //     // }).catch(err => {
+    //     //     this.props.history.push('/login');
+    //     // })
+    // }
+  }
 
-    componentDidMount() {
-        getUser(this);
-
-        if (isAuthenticated) {
-          this.setState({ user: { loggedIn: true}});
-        } else {
-          redirectToLogin(this);
-        }
-
-        // const jwt = getJwt();
-        // console.log(jwt);
-        // if (!jwt) {
-        //     this.props.history.push({pathname: '/login', state: {isModalVisible: true}});
-        // } else {
-        //     console.log('Logged in');
-        //     this.setState({user: {loggedIn: true}})
-        //     // axios.get('/getUser/', { headers: { 
-        //     //     Authorization: 'Bearer ${jwt}'
-        //     // }}).then(res => { 
-        //     //     this.setState({
-        //     //         user: res.data
-        //     //     });
-        //     // }).catch(err => {
-        //     //     this.props.history.push('/login');
-        //     // })
-        // }
-    }
+  componentWillUnmount() {
+    console.log('unmounting')
+    this.setState({ user: undefined });
+  }
 
   render() {
     if (this.state.user === undefined) {
-        return (
-            <div><h1>Loading ...</h1></div>
-        );
+      return (
+        <div><h1>Loading ...</h1></div>
+      );
     }
     console.log(this.state.user);
     return (

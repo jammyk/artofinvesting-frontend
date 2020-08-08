@@ -1,9 +1,9 @@
-tr { 
+.flippedTable tr { 
     display: block; 
     float: left; 
     text-align: left;
 }
 
-th, td { 
+.flippedTable th, .flippedTable td { 
     display: block; 
 }

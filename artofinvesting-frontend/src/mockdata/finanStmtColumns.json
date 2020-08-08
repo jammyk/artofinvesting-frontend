@@ -1,0 +1,30 @@
+[
+    {
+        "key":"financialStmt",
+        "title": "Breakdown",
+        "dataIndex": "field",
+        "fixed":true,
+        "width":"50%",
+        "ellipsis": {
+            "showTitle": false
+        }
+    },
+    {
+        "title": "2017",
+        "dataIndex": "2017",
+        "width":"25%",
+        "align": "center"
+    },
+    {
+        "title": "2018",
+        "dataIndex": "2018",
+        "width":"25%",
+        "align": "center"
+    },
+    {
+        "title": "2019",
+        "dataIndex": "2019",
+        "width":"25%",
+        "align": "center"
+    }
+]

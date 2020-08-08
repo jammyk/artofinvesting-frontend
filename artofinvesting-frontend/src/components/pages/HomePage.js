@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Button, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
-import logo from '../images/aoi_logo.png';
-import CompanySearchBar from './CompanySearchBar';
-import LoginButton from './LoginButton';
+import logo from '../../images/aoi_logo.png';
+import CompanySearchBar from '../CompanySearchBar';
+import LoginButton from '../LoginButton';
 
 class HomePage extends Component {
     render() {

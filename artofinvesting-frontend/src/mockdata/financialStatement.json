@@ -25,7 +25,8 @@
       "basicEPS": 2.74,
       "dilutedEPS": 2.71,
       "basicAvgShares": 7746000,
-      "dilutedAvgShares": 7832000
+      "dilutedAvgShares": 7832000,
+      "EBITDA": 34149000
     },
     {
       "year": 2018,
@@ -48,7 +49,8 @@
       "basicEPS": 2.15,
       "dilutedEPS": 2.13,
       "basicAvgShares": 7700000,
-      "dilutedAvgShares": 7794000
+      "dilutedAvgShares": 7794000,
+      "EBITDA": 49468000
     },
     {
       "year": 2019,
@@ -71,7 +73,8 @@
       "basicEPS": 5.11,
       "dilutedEPS": 5.06,
       "basicAvgShares": 7673000,
-      "dilutedAvgShares": 7753000
+      "dilutedAvgShares": 7753000,
+      "EBITDA": 58056000
     }
   ],
   "balanceSheets": [

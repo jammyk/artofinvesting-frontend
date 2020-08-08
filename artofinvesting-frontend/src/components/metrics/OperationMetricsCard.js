@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import { Card } from 'antd'
-import '../stylesheets/FlippedAxisTable.css';
+import '../../stylesheets/FlippedAxisTable.css';
+import { DashboardOutlined } from '@ant-design/icons';
 
 export default class OperationMetricsCard extends Component {
     render() {
         return (
             <div>
-                <Card title={this.props.isTabs ? '' : 'Operational Metrics'} bordered={false}>
-                    <table>
+                <Card 
+                title={this.props.isTabs ? '' : <div><DashboardOutlined /> Operational Metrics</div>} 
+                bordered={false}
+                >
+                    <table className="flippedTable">
                         <tbody>
                             <tr>
                                 <th>Return on Invested Capital</th>
