@@ -1,0 +1,9 @@
+.screener-navigation-button {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.artist-navigation-button {
+    display: inline-block;
+    padding-left: 20px;
+}

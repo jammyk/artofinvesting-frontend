@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/aoi_logo.png';
 import CompanySearchBar from '../CompanySearchBar';
 import LoginButton from '../LoginButton';
+import '../../stylesheets/HomePage.css'
 
 class HomePage extends Component {
     render() {
@@ -19,11 +20,16 @@ class HomePage extends Component {
                 </Row>
                 <Row justify="center" align="top" style={{ "paddingTop": "20px" }}>
                     <Col span={10}>
-                        <CompanySearchBar />
+                        <CompanySearchBar message="Search for companies using their ticker "/>
                     </Col>
                 </Row>
                 <div style={{ "paddingTop": "20px" }}>
-                    <Link to="/screeners"><Button type="default">Screeners</Button></Link>
+                    <div className="screener-navigation-button">
+                        <Link to="/screeners"><Button type="default">Screeners</Button></Link>
+                    </div>
+                    <div className="artist-navigation-button">
+                        <Link to="/artists"><Button type="default">Artists</Button></Link>
+                    </div>
                 </div>
             </div>
         );

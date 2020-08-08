@@ -56,7 +56,7 @@ export default class CompanySearchBar extends Component {
                     style={{
                         width: "100%"
                     }}>
-                    <Input addonBefore={<SearchOutlined />} placeholder="Search for companies using their ticker " />
+                    <Input addonBefore={<SearchOutlined />} placeholder={this.props.message} />
                 </AutoComplete>
             </div>
         )

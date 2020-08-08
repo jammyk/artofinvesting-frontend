@@ -1,0 +1,28 @@
+p {
+    text-align: left;
+}
+
+.card {
+    margin-top: 3%;
+}
+
+.label {
+    float: left;
+}
+
+#name_label {
+    font-size: 40px;
+    margin-bottom: 0px;
+    /*font-weight: bolder;
+    color: black;*/
+}
+ #company_label {
+    margin-bottom: 0px;
+}
+
+/*
+#asset_label {
+    font-size: large;
+    font-weight: normal;
+    color: black;
+} */

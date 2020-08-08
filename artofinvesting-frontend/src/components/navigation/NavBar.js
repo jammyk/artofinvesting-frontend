@@ -33,7 +33,7 @@ export default class NavBar extends Component {
                     <Col span={5} offset={10} order={2}>
                         <Menu mode="horizontal" style={{ width: 185}}>
                             <Menu.Item><Link to="/screeners"><Text>Screeners</Text></Link></Menu.Item>
-                            <Menu.Item><Link to="/">Artists</Link></Menu.Item>
+                            <Menu.Item><Link to="/artists">Artists</Link></Menu.Item>
                         </Menu>
                     </Col>
                     <Col span={3} order={3} pull={1}>
