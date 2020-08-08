@@ -12,7 +12,7 @@ import Authenticated from './components/authentication/Authenticated';
 import UserProfile from './components/protected/UserProfile';
 import UserWatchlist from './components/protected/UserWatchlist';
 import ArtistSearch from './components/ArtistSearch';
-import ArtistResult from './components/ArtistResult';
+import ArtistResult from './components/pages/ArtistResult';
 
 
 export default class App extends Component {
@@ -31,12 +31,11 @@ export default class App extends Component {
             render={props => (
               <LoginModal {...props} isModalVisible={true} />
             )} />
-          <Route path='/artist_search' component={ArtistSearch} />
-          <Route path='/artist_details' component={ArtistResult} />
+          <Route path='/artists' component={ArtistSearch} />
+          <Route path='/artistDetails' component={ArtistResult} />
           <Route path='/screeners' component={Screener} />
           <Route path='/details' component={DetailsPage} />
           <Route path='/test' component={TestPage} />
-          <Route path='/details' component={DetailsPage} />
           <Route path='/register' component={Registration} />
           <Route path='/forgotpass' component={UserRecoverPassword} />
           <Authenticated>

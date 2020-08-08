@@ -11,18 +11,16 @@ p {
 }
 
 #name_label {
-    font-size: x-large;
+    font-size: 40px;
+    margin-bottom: 0px;
     /*font-weight: bolder;
     color: black;*/
-    margin-bottom: 1em;
+}
+ #company_label {
+    margin-bottom: 0px;
 }
 
-/* #company_label {
-    font-size: large;
-    font-weight: bold;
-    color: black;
-}
-
+/*
 #asset_label {
     font-size: large;
     font-weight: normal;

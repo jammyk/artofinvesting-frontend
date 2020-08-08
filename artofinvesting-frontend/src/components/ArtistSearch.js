@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from '../images/aoi_logo.png';
 import { Row, Col } from 'antd';
 import CompanySearchBar from './CompanySearchBar';
-import { Link } from 'react-router-dom';
 import { Select } from 'antd';
+import NavBar from './navigation/NavBar';
 
 
 const { Option } = Select;
@@ -18,20 +17,25 @@ class ArtistSearch extends Component {
         return (
             <div>
                 <Row>
-                    <Link to="/"><img src={logo} alt="logo" style={{ width: "100px", height: "100px", paddingTop: "1%", paddingLeft: "1%" }} /></Link>
+                    <Col span={24}>
+                        <NavBar />
+                    </Col>
                 </Row>
-                <Row justify="center" align="top" style={{ paddingTop: "200px"}}>
-                    <Col span={8}>
+                <Row justify="center" align="bottom" style={{ paddingTop: "200px" }}>
+                    <h1>Artist Search</h1>
+                </Row>
+                <Row justify="center" align="top" style={{ paddingTop: "20px"}}>
+                    <Col span={10}>
                         <CompanySearchBar message="Name of an artist to search"/>
                     </Col>
-                    <Col>
+                    {/* <Col>
                         <Select defaultValue="13F" style={{ width: 100 }} onChange={this.handleChange}>
                             <Option value="jack">13F</Option>
                             <Option value="lucy">2</Option>
                             <Option value="disabled">3</Option>
                             <Option value="Yiminghe">4</Option>
                         </Select>
-                    </Col>
+                    </Col> */}
                     
                 </Row>
             </div>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Row, Col, Tabs } from 'antd';
-import ArtistQuarterChanges from './ArtistQuarterChanges';
-import ArtistHoldings from './ArtistHoldings';
-import NavBar from './NavBar';
-import '../stylesheets/ArtistResult.css';
+import ArtistQuarterChanges from '../ArtistQuarterChanges';
+import ArtistHoldings from '../ArtistHoldings';
+import NavBar from '../navigation/NavBar';
+import '../../stylesheets/ArtistResult.css';
 import { EditTwoTone, PieChartTwoTone} from '@ant-design/icons';
-import data from '../mockdata/artistHoldings.json';
+import data from '../../mockdata/artistHoldings.json';
 
 const { TabPane } = Tabs;
 
@@ -39,16 +39,16 @@ class ArtistResult extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col span={16} style={{paddingTop: "1%"}}>
+                    <Col span={19} push={3} style={{paddingTop: "1%"}}>
                         <div style={{paddingLeft: "3%", marginTop: "3%"}}>
                             <p id="name_label">{data.name}</p>
-                            <p>{data.company}</p>
+                            <p id="company_label">{data.company}</p>
                             <p>{this.computeAsset()}</p>
                         </div>
                     </Col>
                 </Row>
                 <Row>
-                    <Col span={24} style={{paddingLeft: "2%"}}>
+                    <Col span={19} push={3} style={{paddingLeft: "2%"}}>
                         <Tabs defaultActiveKey="1" onChange={this.callback}>
                             <TabPane tab={<span><EditTwoTone/>Quarterly Changes</span>} key="1">
                                 <ArtistQuarterChanges />

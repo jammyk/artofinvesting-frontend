@@ -114,7 +114,7 @@ class ArtistHoldings extends Component {
     }
     render() {
         return (
-            <Table columns={columns} dataSource={hold} onChange={this.onChange} pagination={{defaultCurrent:1, total:data.length, showSizeChanger:true,
+            <Table className="artist-table" columns={columns} dataSource={hold} onChange={this.onChange} pagination={{defaultCurrent:1, total:data.length, showSizeChanger:true,
             showTotal:(total, range) => `${range[0]}-${range[1]} of ${total} items`}}
                 scroll={{x:true}}
             />
